@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>브랜드 이름</title>
+  <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+  <header>
+    <img src="./src/images/banner1.jpg" alt="향수 배너 이미지" class="header-img">
+    <div class="header-text">
+      <h1>감각을 깨우는 향기의 세계, [브랜드 이름]</h1>
+      <p>고유의 향기로 특별한 순간을 만들어갑니다.</p>
+      <a href="#services" class="btn">자세히 알아보기</a>
+    </div>
+  </header>
+
+  <section class="section1">
+    <h2>브랜드 소개</h2>
+    <div class="content-container">
+      <div class="img-container">
+        <img src="./src/images/info1.jpg" alt="브랜드 이미지">
+      </div>
+      <div class="text-container">
+        <p>[브랜드 이름]은 독특하고 우아한 향기로 여러분의 감각을 깨우는 향수 브랜드입니다. 우리의 향수는 고품질의 재료와 정교한 조향 기술을 바탕으로 만들어지며, 각 향수마다 특별한 이야기를 담고 있습니다.</p>
+        <p>브랜드의 철학은 단순히 좋은 향기를 만드는 것이 아니라, 사용자의 개성과 감정을 표현하는 향기를 창조하는 것입니다. 시간이 지나면서도 기억에 남는 향기를 만나보세요.</p>
+        <p>[브랜드 이름]은 전 세계에서 엄선된 고급 원료를 사용하여 향수를 제작합니다. 각 향은 깊이 있고 복합적인 향조로 설계되어, 한 번 맡아보면 그 향에 빠져들게 됩니다. 우리의 향수는 당신만의 개성을 더욱 돋보이게 만들어줄 것입니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2" id="services">
+    <h2>주요 서비스</h2>
+    <div class="service-container">
+      <div class="service-box">
+        <h3>맞춤 향수 제작</h3>
+        <p>당신만의 고유한 향수를 만들어드립니다. 나만의 향을 찾는 여정을 시작해보세요.</p>
+      </div>
+      <div class="service-box">
+        <h3>향수 컬렉션</h3>
+        <p>다양한 향수 컬렉션을 제공합니다. 각기 다른 스타일과 기분에 맞는 향수를 찾아보세요.</p>
+      </div>
+      <div class="service-box">
+        <h3>향기 체험</h3>
+        <p>향수를 직접 체험해보고, 가장 잘 맞는 향을 선택할 수 있는 기회를 제공합니다.</p>
+      </div>
+      <div class="service-box">
+        <h3>향수 기프트 세트</h3>
+        <p>소중한 사람을 위한 특별한 선물, 향수 기프트 세트를 준비해드립니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section3">
+    <h2>주요 향수 컬렉션</h2>
+    <p>우아하고 감각적인 향수 컬렉션을 만나보세요.</p>
+    <div class="gallery-container">
+      <img src="./src/images/product1.jpg" alt="향수 1">
+      <img src="./src/images/product2.jpg" alt="향수 2">
+      <img src="./src/images/product3.jpg" alt="향수 3">
+      <img src="./src/images/product4.jpg" alt="향수 4">
+    </div>
+  </section>
+
+  <section class="section4">
+    <h2>문의하기</h2>
+    <p>향수에 대해 궁금한 점이 있으신가요? 언제든지 문의해 주세요!</p>
+    <a href="" class="btn">전화 상담</a>
+    <a href="" class="btn">카카오톡 상담</a>
+  </section>
+
+  <footer>
+    <p>대표 이름: OOO | 사업자 번호: xxx-xx-xxxxx</p>
+    <p>2024 [브랜드 이름]. All rights reserved.</p>
+  </footer>
+</body>
+
+<script>
+  const sections = document.querySelectorAll('section');
+
+  const revealSections = () => {
+    const triggerBottom = window.innerHeight * 0.8;
+
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop < triggerBottom) {
+        section.classList.add('show');
+      } else {
+        section.classList.remove('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealSections);
+
+  revealSections();
+</script>
+
+</html>
