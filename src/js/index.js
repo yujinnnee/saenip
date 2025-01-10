@@ -44,4 +44,6 @@ document.addEventListener("DOMContentLoaded", function () {
       location.href = `${domain}/src/html/${selectedLanguage}/index.html`;
     }
   });
+
+  
 });

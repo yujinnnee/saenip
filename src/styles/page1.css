@@ -9,6 +9,18 @@
   margin-bottom: 20px;
 }
 
+.container1 .horizontal-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px; 
+  align-items: center; 
+  width: 100%;
+}
+
+.container1 .horizontal-layout div {
+  text-align: center; 
+}
+
 .container2 {
   display: flex;
   justify-content: center;
@@ -68,7 +80,7 @@
 .container4 .feature {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   background-color: #ffffff;
@@ -84,7 +96,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 500px;
+  gap: 80px;
   width: 100%;
 }
 
@@ -95,7 +107,6 @@
 .container5 > div:last-child {
   text-align: center;
 }
-
 
 .container6 {
   display: grid;
@@ -118,16 +129,6 @@
   justify-content: center;
   align-items: center;
   gap: 40px;
-}
-
-.container5 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  width: 100%;
-  text-align: center;
 }
 
 .container7 {
