@@ -1,0 +1,185 @@
+@import './fontSize.css';
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  align-items: center;
+  color: var(--color-white);
+  box-sizing: border-box;
+}
+
+.text-container {
+  text-align: left;
+}
+
+.action-button {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: var(--color-hover-bg);
+}
+
+.container3 {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.image-grid img {
+  width: 80%;
+}
+
+.container4 {
+  width: 100%;
+  text-align: center;
+}
+
+.container4 .features {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.container4 .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 30%;
+}
+
+.container5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+  width: 100%;
+}
+
+.container5 > div:first-child {
+  text-align: left;
+}
+
+.container5 > div:last-child {
+  text-align: center;
+}
+
+
+.container6 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 40px;
+}
+
+.container6 .feature {
+  text-align: center;
+  width: auto;
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.container5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+.container7 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.container7 .feature {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container8 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.container8 .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.container8 .feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  height: 100%;
+}
+
+.container9 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.container9 > div:first-child {
+  text-align: center;
+}
+
+.container9 > div:last-child {
+  text-align: left;
+}

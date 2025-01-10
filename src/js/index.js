@@ -4,8 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadPage = async (url) => {
     try {
       const response = await fetch(url);
+
       if (!response.ok) throw new Error("페이지를 불러올 수 없습니다.");
+
       const html = await response.text();
+      
       document.getElementById("mainContent").innerHTML = html;
     } catch (error) {
       document.getElementById("mainContent").innerHTML = `<h1>오류</h1><p>${error.message}</p>`;
@@ -34,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("sbxLanguage").addEventListener("change", function () {
     const selectedLanguage = this.value; 
     localStorage.setItem("language", selectedLanguage);
-
-    console.log(selectedLanguage);
 
     if (selectedLanguage === "ko") {
       location.href = `${domain}/index.html`; 
