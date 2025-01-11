@@ -1,0 +1,36 @@
+.container1 {
+    width: 100%;
+    text-align: center;
+}
+.container1 .buttons {
+    margin: 2rem;
+}
+.container1 .buttons button {
+    margin: 0.5rem; /* 버튼들 사이의 여백 */
+}
+.container2 {
+    width: 80%;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+table th, table td {
+    border: 1px solid var(--color-dark-gray);
+    padding: 0.5rem;
+    text-align: center;
+}
+table th {
+    background:  var(--color-secondary);
+    color: var(--color-white);
+}
+table td {
+    background-color: var(--color-white); /* 테이블 셀 배경색을 흰색으로 설정 */
+}
+.container2 p {
+    text-align: left;
+}
