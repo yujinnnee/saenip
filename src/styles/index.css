@@ -26,7 +26,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 30px;
+  padding: 3px 30px;
   position: sticky;
   top: 0;
   width: 100%;
@@ -57,6 +57,8 @@ body {
   padding: 5px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-weight: bold;
+  
 }
 
 .header nav a:hover {
@@ -72,6 +74,7 @@ body {
   font-size: 16px;
   cursor: pointer;
   width: auto;
+  font-weight: bold;
 }
 
 .header .header-btn:hover {
@@ -81,22 +84,40 @@ body {
 .language-select {
   display: inline-block;
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
+
 .language-dropdown {
-  background-color: var(--color-white);
-  color: var(--color-primary);
-  border: 1px solid var(--color-border);
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
   padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 30px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.language-dropdown:hover {
-  background-color: var(--color-button-hover-bg);
+.header.scrolled {
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled nav a {
+  color: var(--color-dark);
+}
+
+.header.scrolled .header-btn {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.header.scrolled .language-dropdown {
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
 }
 
 .main-content {

@@ -1,0 +1,22 @@
+@import './fontSize.css';
+
+.container1-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width:800px;
+  margin: 30px;
+}
+
+.container1-info {
+  text-align: left;
+}
+
+#kakao-map {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border-radius: 10px;
+}

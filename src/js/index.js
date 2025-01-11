@@ -22,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("sbxLanguage").value = currentLanguage;
   loadPage(`${domain}/src/html/${currentLanguage}/${currentPage}`);
 
+  // 로고 클릭 이벤트
+  document.getElementById("btnLogo").addEventListener("click", () => {
+    
+  });
+
   // 상단 메뉴 클릭 이벤트
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function (event) {
@@ -45,5 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  
+  // 스크롤에 따른 헤더 배경색 변경
+  const header = document.querySelector(".header");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  });
 });
