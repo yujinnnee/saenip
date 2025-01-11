@@ -1,7 +1,8 @@
 @import './fontSize.css';
+@import './colors.css';
 
 .h1-basic, .h1-bold, .h2-basic, .h2-bold, .h3-basic, .h3-bold, .p-basic, .p-bold {
-  margin-top: 0px;
+  margin: 0px;
   color: var(--color-dark);
 }
 
