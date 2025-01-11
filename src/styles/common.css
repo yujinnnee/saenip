@@ -32,3 +32,19 @@
 .highlight2 {
   color: var(--color-secondary);
 }
+
+.action-button {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.action-button:hover {
+  background-color: var(--color-hover-bg);
+}

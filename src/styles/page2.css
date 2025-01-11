@@ -1,0 +1,36 @@
+@import './fontSize.css';
+
+.container10 {
+  width: 100%;
+  background-color: var(--color-light);
+}
+
+.container10-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 15px;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.step-text {
+  flex: 1;
+  text-align: center; /* 내부 텍스트 중앙 정렬 */
+}
+
+.step-image {
+  flex-shrink: 0;
+  margin-left: 20px;
+}
