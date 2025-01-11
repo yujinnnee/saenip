@@ -33,7 +33,7 @@
   color: var(--color-secondary);
 }
 
-.action-button {
+.button-style1 {
   background-color: var(--color-secondary);
   color: var(--color-white);
   border: none;
@@ -45,6 +45,6 @@
   transition: background-color 0.3s;
 }
 
-.action-button:hover {
+.button-style1:hover {
   background-color: var(--color-hover-bg);
 }
