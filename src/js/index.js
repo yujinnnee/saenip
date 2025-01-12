@@ -5,13 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const iframe = document.querySelector(".main-iframe");
       const mainContent = document.querySelector(".main-content");
+      const footer = document.querySelector(".footer");
 
       iframe.src = url;
 
       iframe.onload = () => {
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
         const iframeHeight = iframeDocument.body.scrollHeight; // iframe 내부 콘텐츠 높이
-        mainContent.style.height = `${iframeHeight}px`; // main-content 높이를 iframe 콘텐츠 높이에 맞춤
+        const footerHeight = footer.offsetHeight; // footer 높이
+        mainContent.style.height = `${iframeHeight + footerHeight}px`; // iframe 높이 + footer 높이
 
         const sections = iframeDocument.querySelectorAll("section");
         observeIframeSections(sections);
