@@ -47,5 +47,231 @@
 }
 
 .button-style1:hover {
+  background-color: var(--color-primary);
+}
+
+.sub-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-light-grey);
+  gap: 180px;
+}
+
+.sub-footer .footer-info {
+  flex: 1;
+  text-align: left;
+}
+
+section {
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@import './colors.css';
+
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'NanumSquareRoundOTFEB', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: 'NanumSquareRoundOTFEB', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.header nav a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 17px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.header nav a:hover {
   background-color: var(--color-hover-bg);
+}
+
+.header .header-btn {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header .header-btn:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+.language-select {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.language-dropdown {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.language-dropdown option {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+}
+
+.header.scrolled {
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled nav a {
+  color: var(--color-dark);
+}
+
+.header.scrolled .header-btn {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.header.scrolled .language-dropdown {
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.main-content {
+  width: 100%;
+  height: calc(100vh - 70px); /* 헤더와 푸터를 제외한 높이 설정 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.main-iframe {
+  flex: 1; /* 부모 요소의 나머지 공간을 채움 */
+  border: none;
+  display: block; /* 기본 block 속성 유지 */
+  width: 100%; /* 부모 요소 너비를 완전히 채움 */
+  height: 100%; /* 부모 요소 높이를 완전히 채움 */
+}
+
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 150px;
+  z-index: 1000;
+  height: 70px;
+}
+
+.footer p {
+  font-size: 18px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer input,
+.footer .submit-btn {
+  padding: 10px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+}
+
+.footer .submit-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100px;
+}
+
+.footer .submit-btn:hover {
+  background-color: var(--color-primary);
 }
