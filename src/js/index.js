@@ -4,12 +4,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const loadPageInIframe = async (url) => {
     try {
       const iframe = document.querySelector(".main-iframe");
+      const mainContent = document.querySelector(".main-content");
+
       iframe.src = url;
 
       iframe.onload = () => {
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const sections = iframeDocument.querySelectorAll("section");
+        const iframeHeight = iframeDocument.body.scrollHeight; // iframe 내부 콘텐츠 높이
+        mainContent.style.height = `${iframeHeight}px`; // main-content 높이를 iframe 콘텐츠 높이에 맞춤
 
+        const sections = iframeDocument.querySelectorAll("section");
         observeIframeSections(sections);
       };
     } catch (error) {

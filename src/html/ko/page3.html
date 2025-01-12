@@ -1,220 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <link rel="stylesheet" href="./src/styles/page3.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAENIP</title>
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/page3.css">
+  <script src="../../js/page3.js"></script>
 </head>
-
-<section>
-  <div class="container1">
-    <h1 class="h1-bold">합리적인 가격</h1>
-    <div class="buttons">
-      <button class="button-style1">입고비</button>
-      <button class="button-style1">보관비</button>
-      <button class="button-style1">출고비</button>
-      <button class="button-style1">기타 작업비</button>
+<body>
+  <section>
+    <div class="container1">
+      <h1 class="h1-bold">합리적인 가격</h1>
+      <div class="buttons">
+        <button class="button-style1">입고비</button>
+        <button class="button-style1">보관비</button>
+        <button class="button-style1">출고비</button>
+        <button class="button-style1">기타 작업비</button>
+      </div>
+      <p>24시간 연중무휴 카카오톡 견적문의<br>전화 : 010-2565-4892</p>
     </div>
-    <p>24시간 연중무휴 카카오톡 견적문의<br>전화 : 010-2565-4892</p>
-  </div>
-</section>
+  </section>
+  <section style="background-color: var(--color-light-gray);">
+    <div class="container2">
+      <h2 class="h2-bold highlight2">입고비</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>단위</th>
+            <th>단가(원)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">하역/입고작업비<br>(시스템 재고 반영)</td>
+            <td>PLT</td>
+            <td>5,000</td>
+            <td>단일 PLT 내에 SKU 흔적시 BOX 입고비 발생</td>
+          </tr>
+          <tr>
+            <td>BOX</td>
+            <td>500</td>
+            <td>단일 BOX 내에 SKU 흔적시 PCS 입고비 발생</td>
+          </tr>
+          <tr>
+            <td>PCS</td>
+            <td>100</td>
+            <td>전수검사 및 개별 입고시 발생, 검수 난이도 따라 상이</td>
+          </tr>
+          <tr>
+            <td>11톤/40피트 하역</td>
+            <td>차량</td>
+            <td>500,000</td>
+            <td rowspan="4">파레타이징 필요 수작업시 기준 비용<br>상품 유형에 따라 조정 협의<br>(입고작업비/재고반영비 포함금액)</td>
+          </tr>
+          <tr>
+            <td>5톤/20피트 하역</td>
+            <td>차량</td>
+            <td>250,000</td>
+          </tr>
+          <tr>
+            <td>2.5톤 하역</td>
+            <td>차량</td>
+            <td>150,000</td>
+          </tr>
+          <tr>
+            <td>1톤 하역</td>
+            <td>차량</td>
+            <td>50,000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 입고정보 대비 실수량 비교<br>
+        - 출고가능일 : 입고일 +2일<br>
+        - <span class="highlight1">바코드 미부착 상품</span> 부착 진행시 PCS 입고비발생<br>
+        - 차량 수작업 하역 후 팔레타이징 작업 필요시 상품 유형 따른 조정 협의 후 별도 비용 발생
+      </p>
+    </div>
+  </section>
 
-<section style="background-color: var(--color-light-gray);">
-  <div class="container2">
-    <h2 class="h2-bold highlight2">입고비</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>구분</th>
-          <th>단위</th>
-          <th>단가(원)</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="3">하역/입고작업비<br>(시스템 재고 반영)</td>
-          <td>PLT</td>
-          <td>5,000</td>
-          <td>단일 PLT 내에 SKU 흔적시 BOX 입고비 발생</td>
-        </tr>
-        <tr>
-          <td>BOX</td>
-          <td>500</td>
-          <td>단일 BOX 내에 SKU 흔적시 PCS 입고비 발생</td>
-        </tr>
-        <tr>
-          <td>PCS</td>
-          <td>100</td>
-          <td>전수검사 및 개별 입고시 발생, 검수 난이도 따라 상이</td>
-        </tr>
-        <tr>
-          <td>11톤/40피트 하역</td>
-          <td>차량</td>
-          <td>500,000</td>
-          <td rowspan="4">파레타이징 필요 수작업시 기준 비용<br>상품 유형에 따라 조정 협의<br>(입고작업비/재고반영비 포함금액)</td>
-        </tr>
-        <tr>
-          <td>5톤/20피트 하역</td>
-          <td>차량</td>
-          <td>250,000</td>
-        </tr>
-        <tr>
-          <td>2.5톤 하역</td>
-          <td>차량</td>
-          <td>150,000</td>
-        </tr>
-        <tr>
-          <td>1톤 하역</td>
-          <td>차량</td>
-          <td>50,000</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      - 입고정보 대비 실수량 비교<br>
-      - 출고가능일 : 입고일 +2일<br>
-      - <span class="highlight1">바코드 미부착 상품</span> 부착 진행시 PCS 입고비발생<br>
-      - 차량 수작업 하역 후 팔레타이징 작업 필요시 상품 유형 따른 조정 협의 후 별도 비용 발생
-    </p>
-  </div>
-</section>
+  <section>
+    <div class="container2">
+      <h2 class="h2-bold highlight2">보관비</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>단위</th>
+            <th>단가(원)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>파레트</td>
+            <td rowspan="2">일</td>
+            <td>600/PLT</td>
+            <td>보관 규격 : 110x110x160cm<br>1PLT 내 1SKU 기준<br>소품종 다량상품 위주 보관<br>선입선출(유통기한/LOT)관리시 추가비용 발생</td>
+          </tr>
+          <tr>
+            <td>선반셀</td>
+            <td>700/SET</td>
+            <td>보관 규격 : 120x60x180cm<br>4단 1SET<br>다품종 소량 상품 위주 보관<br>선입선출(유통기한/LOT)관리시 추가비용 발생</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 안전한 보관과 출고를 위해서 사전 협의 후 보관 장소 <span class="highlight1">이동 재고 관리</span> 진행<br>
+        - 상품 관리 유형에 따라 적합한 보관방식으로 보관 안내<br>
+        - 선반셀 내 SKU 혼재 및 별도 칸막이 구분시 PCS 당 보관 비용 협의 진행
+      </p>
+    </div>
+  </section>
 
-<section>
-  <div class="container2">
-    <h2 class="h2-bold highlight2">보관비</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>구분</th>
-          <th>단위</th>
-          <th>단가(원)</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>파레트</td>
-          <td rowspan="2">일</td>
-          <td>600/PLT</td>
-          <td>보관 규격 : 110x110x160cm<br>1PLT 내 1SKU 기준<br>소품종 다량상품 위주 보관<br>선입선출(유통기한/LOT)관리시 추가비용 발생</td>
-        </tr>
-        <tr>
-          <td>선반셀</td>
-          <td>700/SET</td>
-          <td>보관 규격 : 120x60x180cm<br>4단 1SET<br>다품종 소량 상품 위주 보관<br>선입선출(유통기한/LOT)관리시 추가비용 발생</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      - 안전한 보관과 출고를 위해서 사전 협의 후 보관 장소 <span class="highlight1">이동 재고 관리</span> 진행<br>
-      - 상품 관리 유형에 따라 적합한 보관방식으로 보관 안내<br>
-      - 선반셀 내 SKU 혼재 및 별도 칸막이 구분시 PCS 당 보관 비용 협의 진행
-    </p>
-  </div>
-</section>
+  <section style="background-color: var(--color-light-gray);">
+    <div class="container2">
+      <h2 class="h2-bold highlight2">출고비</h2>
+      <table>
+        <p>(표준 부자재 비용 포함 기준 금액)</p>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>단위</th>
+            <th>단가(원)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>봉투/극소</td>
+            <td>봉투/박스</td>
+            <td rowspan="6">상품 군에 따른 협의</td>
+            <td>규격: 세변의 합 80cm / 2kg 이하</td>
+          </tr>
+          <tr>
+            <td>소형1</td>
+            <td>박스</td>
+            <td>규격: 세변의 합 90cm / 4kg 이하</td>
+          </tr>
+          <tr>
+            <td>소형2</td>
+            <td>박스</td>
+            <td>규격: 세변의 합 100cm / 6kg 이하</td>
+          </tr>
+          <tr>
+            <td>중형</td>
+            <td>박스</td>
+            <td>규격: 세변의 합 120cm / 10kg 이하</td>
+          </tr>
+          <tr>
+            <td>대형</td>
+            <td>박스</td>
+            <td>규격: 세변의 합 160cm / 20kg 이하</td>
+          </tr>
+          <tr>
+            <td>이형</td>
+            <td>박스</td>
+            <td>상기 규격 초과 품목</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 출고비는 <span class="highlight1">택배비 + 피킹/패킹비 + 포장 부자재비용 포함</span> 금액, 선택 부자재 따라 비용 상이<br>
+        - 전용 공장 부자재 사용시 택배비 + 피킹/패킹 비용 청구<br>
+        - 합포장 진행시 기타작업비상 안내된 별도 추가 비용 발생, 제주 도서산간 배송 추가 비용 발생<br>
+        - 택배처리 불가 품목: 세변합 160cm 초과, 최장변 120cm 초과, 나체품, 서류봉투, 마대포장, 결박화물<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위험 화물: 부탄가스 (가정/캠핑용), 유성 페인트, 엔진오일, 농약
+      </p>
+    </div>
+  </section>
 
-<section style="background-color: var(--color-light-gray);">
-  <div class="container2">
-    <h2 class="h2-bold highlight2">출고비</h2>
-    <table>
-      <p>(표준 부자재 비용 포함 기준 금액)</p>
-      <thead>
-        <tr>
-          <th>구분</th>
-          <th>단위</th>
-          <th>단가(원)</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>봉투/극소</td>
-          <td>봉투/박스</td>
-          <td rowspan="6">상품 군에 따른 협의</td>
-          <td>규격: 세변의 합 80cm / 2kg 이하</td>
-        </tr>
-        <tr>
-          <td>소형1</td>
-          <td>박스</td>
-          <td>규격: 세변의 합 90cm / 4kg 이하</td>
-        </tr>
-        <tr>
-          <td>소형2</td>
-          <td>박스</td>
-          <td>규격: 세변의 합 100cm / 6kg 이하</td>
-        </tr>
-        <tr>
-          <td>중형</td>
-          <td>박스</td>
-          <td>규격: 세변의 합 120cm / 10kg 이하</td>
-        </tr>
-        <tr>
-          <td>대형</td>
-          <td>박스</td>
-          <td>규격: 세변의 합 160cm / 20kg 이하</td>
-        </tr>
-        <tr>
-          <td>이형</td>
-          <td>박스</td>
-          <td>상기 규격 초과 품목</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      - 출고비는 <span class="highlight1">택배비 + 피킹/패킹비 + 포장 부자재비용 포함</span> 금액, 선택 부자재 따라 비용 상이<br>
-      - 전용 공장 부자재 사용시 택배비 + 피킹/패킹 비용 청구<br>
-      - 합포장 진행시 기타작업비상 안내된 별도 추가 비용 발생, 제주 도서산간 배송 추가 비용 발생<br>
-      - 택배처리 불가 품목: 세변합 160cm 초과, 최장변 120cm 초과, 나체품, 서류봉투, 마대포장, 결박화물<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위험 화물: 부탄가스 (가정/캠핑용), 유성 페인트, 엔진오일, 농약
-    </p>
-  </div>
-</section>
-
-<section>
-  <div class="container2">
-    <h2 class="h2-bold highlight2">기타 작업비</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>구분</th>
-          <th>단위</th>
-          <th>단가(원)</th>
-          <th>비고</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>합포장</td>
-          <td>PCS</td>
-          <td>100</td>
-          <td>상품 묶음 배송시 추가 되는 포장 작업비용</td>
-        </tr>
-        <tr>
-          <td>세트화 작업</td>
-          <td>SET</td>
-          <td>협의</td>
-          <td>상품 유형/작업난이도/소요시간 에 따른 협의</td>
-        </tr>
-        <tr>
-          <td>반품검수비</td>
-          <td>건</td>
-          <td>400</td>
-          <td>반품 택배비 별도, 반품 상태 검수 정보 공유</td>
-        </tr>
-        <tr>
-          <td>양품화/재입고</td>
-          <td>PCS</td>
-          <td>협의</td>
-          <td>상품 유형/작업난이도/소요시간 에 따른 협의</td>
-        </tr>
-        <tr>
-          <td>기타 이동 및 출고</td>
-          <td colspan="2">입고 기준</td>
-          <td>창고이동/화주사 회수 등 시스템 재고 차감시</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      - 기타 유통가공 작업, 출력물, 스티커, 서류작업 등 비용은 사전 협의 후 별도 발생<br>
-      - 직배송/ 쿠팡/ 기타 <span class="highlight1">택배 이외 출고방식</span>은 사전 협의에 따른 비용 발생<br>
-      - 제공 되는 전산 재고 이외 별도 재고조사 요청에 따른 비용 발생<br>
-    </p>
-  </div>
-</section>
+  <section>
+    <div class="container2">
+      <h2 class="h2-bold highlight2">기타 작업비</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>구분</th>
+            <th>단위</th>
+            <th>단가(원)</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>합포장</td>
+            <td>PCS</td>
+            <td>100</td>
+            <td>상품 묶음 배송시 추가 되는 포장 작업비용</td>
+          </tr>
+          <tr>
+            <td>세트화 작업</td>
+            <td>SET</td>
+            <td>협의</td>
+            <td>상품 유형/작업난이도/소요시간 에 따른 협의</td>
+          </tr>
+          <tr>
+            <td>반품검수비</td>
+            <td>건</td>
+            <td>400</td>
+            <td>반품 택배비 별도, 반품 상태 검수 정보 공유</td>
+          </tr>
+          <tr>
+            <td>양품화/재입고</td>
+            <td>PCS</td>
+            <td>협의</td>
+            <td>상품 유형/작업난이도/소요시간 에 따른 협의</td>
+          </tr>
+          <tr>
+            <td>기타 이동 및 출고</td>
+            <td colspan="2">입고 기준</td>
+            <td>창고이동/화주사 회수 등 시스템 재고 차감시</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 기타 유통가공 작업, 출력물, 스티커, 서류작업 등 비용은 사전 협의 후 별도 발생<br>
+        - 직배송/ 쿠팡/ 기타 <span class="highlight1">택배 이외 출고방식</span>은 사전 협의에 따른 비용 발생<br>
+        - 제공 되는 전산 재고 이외 별도 재고조사 요청에 따른 비용 발생<br>
+      </p>
+    </div>
+  </section>
+  <section>
+    <div class="sub-footer">
+      <div class="logo">
+        <img src="../../images/image.png" style="width:300px"/>
+      </div>
+      <div class="footer-info">
+        <h3>주식회사 새닢</h3>
+        <p>대표자: 손재봉 사업자번호: 121-81-99283</p>
+        <p>주소: 인천 부평구 주부토로236 U1센터</p>
+        <p>대표 전화: 010-2565-4892</p>
+        <p>대표 메일: saenipkorea@daum.net</p>
+        <p></p>
+        <p>이용약관 | 개인정보처리방침</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
