@@ -2,6 +2,7 @@
   --color-primary: #00cfff;
   --color-secondary: #008fcc;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-dark: #333;
   --color-light-gray: #eeeeeed4;
   --color-dark-gray: #a0a0a0;
@@ -10,4 +11,5 @@
   --color-border: #ccc;
   --color-orange: #F77100;
   --color-brown: #a0744f;
+  --color-red: #D8262F;
 }
