@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const sections = iframeDocument.querySelectorAll("section");
         observeIframeSections(sections);
+
+        window.scrollTo(0, 0);
       };
     } catch (error) {
       document.getElementById("mainContent").innerHTML = `<h1>오류</h1><p>${error.message}</p>`;

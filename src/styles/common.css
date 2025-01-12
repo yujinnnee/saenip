@@ -35,7 +35,7 @@
 }
 
 .button-style1 {
-  background-color: var(--color-secondary);
+  background-color: var(--color-third);
   color: var(--color-white);
   border: none;
   padding: 15px 30px;
@@ -47,12 +47,12 @@
 }
 
 .button-style1:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-black);
 }
 
 .sub-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: var(--color-light-grey);
   gap: 180px;
@@ -229,7 +229,6 @@ button {
   width: 100%; /* 부모 요소 너비를 완전히 채움 */
   height: 100%; /* 부모 요소 높이를 완전히 채움 */
 }
-
 
 .footer {
   position: fixed;

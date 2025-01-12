@@ -18,10 +18,10 @@
 .step {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 15px;
-  background-color: var(--color-light-gray);
+  background-color: var(--color-white);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -46,6 +46,15 @@
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 .feature p {
+  margin:0 30px 25px 30px;
+}
+
+.container2 .feature img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .container3 {

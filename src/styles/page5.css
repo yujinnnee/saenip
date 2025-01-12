@@ -17,3 +17,7 @@
 .img-container h1, .img-container p {
   text-align: left; /* 왼쪽 정렬 */
 }
+
+.img-container h1 {
+  margin-bottom: 2%;
+}

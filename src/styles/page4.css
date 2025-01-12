@@ -3,6 +3,7 @@
   justify-content: space-between;
   gap: 1rem;
   align-items: center;
+  width: 80%;
   /* 세로로 맞추기 */
 }
 
@@ -11,7 +12,7 @@
   padding: 20px;
   text-align: center;
   flex: 1 1 260px;
-  max-width: 260px;
+  max-width: 23%;
 }
 
 .image-box h2 {
@@ -59,11 +60,8 @@ p {
 }
 
 .container3 {
-  background-color: var(--color-red);
   width: 100%;
   color: var(--color-white);
-  padding-top: 2%;
-  padding-bottom: 2%;
 }
 
 .text-box-container {
@@ -112,7 +110,7 @@ p {
   padding-left: 15%;
   padding-right: 15%;
   font-size: 1.2vw;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 .container4 p {
