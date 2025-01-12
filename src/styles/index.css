@@ -1,12 +1,14 @@
 @import './colors.css';
 
-body {
-  margin: 0;
-  padding: 0;
+@font-face {
+  font-family: 'NanumSquareRoundOTFEB';
+  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'NanumSquareRoundOTFEB', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -14,6 +16,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 *, *::before, *::after {
@@ -205,4 +209,12 @@ section {
   align-items: center;
   width: 100%;
   text-align: center;
+  opacity: 0;
+  transform: translateX(-100px); /* 초기 위치 */
+  transition: all 0.5s ease; /* 애니메이션 효과 */
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateX(0); /* 최종 위치 */
 }

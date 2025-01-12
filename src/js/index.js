@@ -10,47 +10,66 @@ document.addEventListener("DOMContentLoaded", function () {
       const html = await response.text();
       
       document.getElementById("mainContent").innerHTML = html;
+
+      // 새로 로드된 콘텐츠 내 섹션에도 슬라이드 효과 적용
+      observeSections();
     } catch (error) {
       document.getElementById("mainContent").innerHTML = `<h1>오류</h1><p>${error.message}</p>`;
     }
   };
 
-  // 페이지 세팅
-  const currentLanguage = localStorage.getItem("language") || "ko"; 
-  const currentPage = localStorage.getItem("currentPage") || "page1.html"; 
+  const observeSections = () => {
+    const sections = document.querySelectorAll("section");
+
+    const observerOptions = {
+      root: null,
+      threshold: 0.1, // 섹션이 10% 이상 보일 때 트리거
+    };
+
+    const observerCallback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible"); // visible 클래스 추가
+          observer.unobserve(entry.target); // 한 번 나타난 섹션은 다시 감지하지 않음
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
+  };
+
+  // 페이지 초기 로드 시 섹션 감지 시작
+  observeSections();
+
+  // 기존 이벤트 리스너들 유지
+  const currentLanguage = localStorage.getItem("language") || "ko";
+  const currentPage = localStorage.getItem("currentPage") || "page1.html";
 
   document.getElementById("sbxLanguage").value = currentLanguage;
   loadPage(`${domain}/src/html/${currentLanguage}/${currentPage}`);
 
-  // 로고 클릭 이벤트
-  document.getElementById("btnLogo").addEventListener("click", () => {
-    
-  });
+  document.getElementById("btnLogo").addEventListener("click", () => {});
 
-  // 상단 메뉴 클릭 이벤트
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function (event) {
-      event.preventDefault(); // 기본 링크 이동 방지
-
+      event.preventDefault();
       loadPage(`${domain}/src/html/${currentLanguage}/${this.getAttribute("data-page")}`);
-
       localStorage.setItem("currentPage", this.getAttribute("data-page"));
     });
   });
 
-  // 언어 변경 시 페이지 갱신
   document.getElementById("sbxLanguage").addEventListener("change", function () {
-    const selectedLanguage = this.value; 
+    const selectedLanguage = this.value;
     localStorage.setItem("language", selectedLanguage);
 
     if (selectedLanguage === "ko") {
-      location.href = `${domain}/index.html`; 
+      location.href = `${domain}/index.html`;
     } else {
       location.href = `${domain}/src/html/${selectedLanguage}/index.html`;
     }
   });
 
-  // 스크롤에 따른 헤더 배경색 변경
   const header = document.querySelector(".header");
 
   window.addEventListener("scroll", () => {
