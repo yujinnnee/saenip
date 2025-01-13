@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       iframe.onload = () => {
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const iframeHeight = iframeDocument.body.scrollHeight; // iframe 내부 콘텐츠 높이
-        const footerHeight = footer.offsetHeight; // footer 높이
-        mainContent.style.height = `${iframeHeight + footerHeight}px`; // iframe 높이 + footer 높이
+        const iframeHeight = iframeDocument.body.scrollHeight;          // iframe 내부 콘텐츠 높이
+        const footerHeight = footer.offsetHeight;                       // footer 높이
+        mainContent.style.height = `${iframeHeight + footerHeight}px`;  // iframe 높이 + footer 높이
 
         const sections = iframeDocument.querySelectorAll("section");
         observeIframeSections(sections);
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const currentPage = localStorage.getItem("currentPage") || "page1.html";
 
   document.getElementById("sbxLanguage").value = currentLanguage;
-  loadPageInIframe(`${domain}/src/html/${currentLanguage}/${currentPage}`);
+  loadPageInIframe(`${domain}/src/pages/${currentLanguage}/${currentPage}`);
 
   document.getElementById("btnLogo").addEventListener("click", () => {});
 
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", function (event) {
       event.preventDefault();
       const newPage = this.getAttribute("data-page");
-      loadPageInIframe(`${domain}/src/html/${currentLanguage}/${newPage}`);
+      loadPageInIframe(`${domain}/src/pages/${currentLanguage}/${newPage}`);
       localStorage.setItem("currentPage", newPage);
     });
   });
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (selectedLanguage === "ko") {
       location.href = `${domain}/index.html`;
     } else {
-      location.href = `${domain}/src/html/${selectedLanguage}/index.html`;
+      location.href = `${domain}/src/pages/${selectedLanguage}/index.html`;
     }
   });
 
