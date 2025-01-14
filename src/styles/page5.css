@@ -21,3 +21,22 @@
 .img-container h1 {
   margin-bottom: 2%;
 }
+
+.marquee {
+  position: relative;
+  width: 80%;
+  height: 120px;
+  background: url('../images/image.png') repeat-x; /* 반복 배경 */
+  background-size: contain; /* 이미지 크기 조정 */
+  animation: scroll-bg 10s linear infinite; /* 배경 스크롤 애니메이션 */
+  margin-bottom: 3%;
+}
+
+@keyframes scroll-bg {
+  0% {
+    background-position: 0 0; /* 시작 위치 */
+  }
+  100% {
+    background-position: -100% 0; /* 왼쪽으로 이동 */
+  }
+}
