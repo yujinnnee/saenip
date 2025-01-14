@@ -1,0 +1,19 @@
+.container1 {
+  width: 80%;
+}
+
+.img-container {
+  display: flex;
+  gap: 90px;
+  justify-content: flex-start; /* 왼쪽 정렬 */
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.img-container img {
+  width: 36%;
+}
+
+.img-container h1, .img-container p {
+  text-align: left; /* 왼쪽 정렬 */
+}
