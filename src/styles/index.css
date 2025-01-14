@@ -1,35 +1,17 @@
 @import './colors.css';
 
-@font-face {
-  font-family: 'NanumSquareRoundOTFEB';
-  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-html, body {
-  font-family: 'NanumSquareRoundOTFEB', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-input,
-textarea,
-select,
-button {
-  font-family: 'NanumSquareRoundOTFEB', sans-serif;
-}
-
 .header {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: var(--color-white);
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3px 10px;
+  padding: 3px 30px;
+  position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -100,11 +82,66 @@ button {
   color: var(--color-dark);
 }
 
-.footer {
+.header.scrolled {
+  background: var(--color-white);
+  color: var(--color-dark);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header.scrolled nav a {
+  color: var(--color-dark);
+}
+
+.header.scrolled .header-btn {
   background-color: var(--color-dark);
   color: var(--color-white);
-  padding: 10px 30px;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+}
+
+.header.scrolled .language-dropdown {
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.main-content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-iframe {
+  flex: 1; /* 부모 요소의 나머지 공간을 채움 */
+  border: none;
+  display: block; /* 기본 block 속성 유지 */
+  width: 100%; /* 부모 요소 너비를 완전히 채움 */
+  height: 100%; /* 부모 요소 높이를 완전히 채움 */
+}
+
+.footer {
+  position: fixed; /* 화면에 고정 */
+  bottom: 0; /* 화면 하단에 위치 */
+  left: 0;
+  width: 100%; /* 화면 너비를 꽉 채움 */
+  background-color: var(--color-dark); /* 배경색 */
+  color: var(--color-white); /* 글자 색상 */
+  padding: 15px 40px; /* 상하좌우 여백 */
+  display: flex; /* Flexbox 레이아웃 */
+  justify-content: space-between; /* 자식 요소를 양 끝으로 배치 */
+  align-items: center; /* 수직 정렬 */
+  z-index: 1000; /* 다른 요소보다 위에 표시 */
+}
+
+.footer .submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+}
+
+.footer .submit-btn:hover {
+  background-color: var(--color-primary);
 }

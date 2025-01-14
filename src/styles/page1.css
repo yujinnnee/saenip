@@ -9,16 +9,9 @@
   margin-bottom: 20px;
 }
 
-.container1 .horizontal-layout {
-  display: flex;
-  justify-content: space-between;
-  gap: 150px; 
-  align-items: center; 
-  width: 100%;
-}
-
-.container1 .horizontal-layout div {
-  text-align: center; 
+.container1 {
+  text-align: left;
+  width: 80%;
 }
 
 .container2 {
@@ -180,7 +173,7 @@
 
 .container9 .feature {
   text-align: center;
-  width: 60%;
+  width: 70%;
   background-color: var(--color-white);
   border: 1px solid #ddd;
   border-radius: 10px;

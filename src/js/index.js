@@ -1,5 +1,5 @@
-// const domain = 'http://127.0.0.1:5501';
-const domain = 'https://yujinnnee.github.io/saenip/';
+const domain = 'http://127.0.0.1:5501';
+// const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
   const loadPageInIframe = async (url) => {
@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       iframe.onload = () => {
         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const iframeHeight = iframeDocument.body.scrollHeight;          // iframe 내부 콘텐츠 높이
-        const footerHeight = footer.offsetHeight;                       // footer 높이
-        mainContent.style.height = `${iframeHeight + footerHeight}px`;  // iframe 높이 + footer 높이
+        const iframeHeight = iframeDocument.body.scrollHeight;      
+        const footerHeight = footer.offsetHeight;                   
+        mainContent.style.height = `${iframeHeight + footerHeight}px`;
 
         const sections = iframeDocument.querySelectorAll("section");
         observeIframeSections(sections);

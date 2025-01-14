@@ -1,18 +1,22 @@
 window.onload = function () {
-    console.log('aa')
-    var container = document.getElementById('kakao-map');
-    var options = {
-      center: new kakao.maps.LatLng(37.5665, 126.9780), // 서울시청 좌표 (샘플)
-      level: 3 // 지도 확대 레벨
-    };
-  
-    var map = new kakao.maps.Map(container, options);
-  
-    var markerPosition = new kakao.maps.LatLng(37.5665, 126.9780); // 마커가 표시될 위치 (샘플)
-    var marker = new kakao.maps.Marker({
-      position: markerPosition
-    });
-  
-    marker.setMap(map);
+  const latitude = 37.515233;
+  const longitude = 126.726906;
+
+  const mapOption = {
+    center: new kakao.maps.LatLng(latitude, longitude),
+    level: 3
   };
-  
+
+  const map = new kakao.maps.Map(document.getElementById('map'), mapOption);
+
+  const marker = new kakao.maps.Marker({
+    position: new kakao.maps.LatLng(latitude, longitude)
+  });
+
+  marker.setMap(map);
+
+  document.querySelector('.info-box').addEventListener('click', function () {
+    const kakaoMapUrl = `https://map.kakao.com/link/map/인천 부평구 U1센터,${latitude},${longitude}`;
+    window.open(kakaoMapUrl, '_blank');
+  });
+};
