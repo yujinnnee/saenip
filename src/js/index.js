@@ -8,19 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
       const mainContent = document.querySelector(".main-content");
       const footer = document.querySelector(".footer");
 
+      const updateIframeHeight = () => {
+        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
+        if (iframeDocument && iframeDocument.body) {
+          const iframeHeight = iframeDocument.body.scrollHeight;
+          const footerHeight = footer.offsetHeight;
+          mainContent.style.height = `${iframeHeight + footerHeight}px`;
+        }
+      };
+
       iframe.src = url;
 
       iframe.onload = () => {
-        const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
-        const iframeHeight = iframeDocument.body.scrollHeight;      
-        const footerHeight = footer.offsetHeight;                   
-        mainContent.style.height = `${iframeHeight + footerHeight}px`;
+        updateIframeHeight();
 
-        const sections = iframeDocument.querySelectorAll("section");
+        const sections = iframe.contentDocument.querySelectorAll("section");
         observeIframeSections(sections);
 
         window.scrollTo(0, 0);
       };
+
+      window.addEventListener("resize", updateIframeHeight);
     } catch (error) {
       document.getElementById("mainContent").innerHTML = `<h1>오류</h1><p>${error.message}</p>`;
     }
@@ -51,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("sbxLanguage").value = currentLanguage;
   loadPageInIframe(`${domain}/src/pages/${currentLanguage}/${currentPage}`);
 
-  document.getElementById("btnLogo").addEventListener("click", () => {});
+  document.getElementById("btnLogo").addEventListener("click", () => { });
 
   document.querySelectorAll("nav a").forEach(link => {
     link.addEventListener("click", function (event) {
@@ -82,4 +90,21 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("scrolled");
     }
   });
+
+  function checkHeaderLines() {
+    const header = document.querySelector('.header');
+
+    const headerFullWidth = header.scrollWidth;
+    const screenWidthWithoutScrollbar = document.documentElement.clientWidth;
+
+    if (headerFullWidth > screenWidthWithoutScrollbar) {
+      console.log("가려졌다!!");
+      header.classList.add('small-screen');
+    } else {
+      header.classList.remove('small-screen');
+    }
+  }
+
+  window.addEventListener('load', checkHeaderLines);
+  window.addEventListener('resize', checkHeaderLines);
 });
