@@ -1,11 +1,11 @@
 @import './fontSize.css';
 
-.container10 {
+.container1 {
   width: 100%;
   background-color: var(--color-light);
 }
 
-.container10-steps {
+.container1-steps {
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -18,19 +18,157 @@
 .step {
   display: flex;
   align-items: center;
-  padding: 20px;
-  border: 1px solid var(--color-secondary);
+  padding: 10px;
+  border: none;
   border-radius: 15px;
   background-color: var(--color-white);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .step-text {
   flex: 1;
-  text-align: center; /* 내부 텍스트 중앙 정렬 */
+  text-align: center;
 }
 
 .step-image {
   flex-shrink: 0;
-  margin-left: 20px;
+  width: 200px;
+}
+
+.step-image img {
+  flex-shrink: 0;
+  width: 200px;
+}
+
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.container2 .feature {
+  background-color: var(--color-white);
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container2 .feature p {
+  margin:0 30px 25px 30px;
+}
+
+.container2 .feature img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.container3 > div:first-child {
+  text-align: left;
+}
+
+.container3 > div:last-child {
+  text-align: center;
+}
+
+.container4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+.container4 > div:first-child {
+  text-align: center;
+}
+
+.container4 > div:last-child {
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .container1-steps {
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 가로 중앙 정렬 */
+    justify-content: center; /* 수직 방향 정렬 */
+    padding: 20px;
+    text-align: center;
+    gap: 15px;
+    width: 100%; /* 전체 너비를 차지 */
+    max-width: 300px; /* 최대 너비 제한 */
+    margin: 0 auto 20px auto; /* 상단/하단 여백 및 가로 중앙 정렬 */
+  }
+
+  .step-image {
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .step-image img {
+    flex-shrink: 0;
+    width: 100%;
+  }
+
+  .container2 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+  }
+
+  .container2 .feature p {
+    margin: 15px 20px 20px 20px;
+  }
+
+  .container3 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container3 > div:last-child img {
+    width: 200px;
+  }
+
+  .container4 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .container4 > div:last-child {
+    text-align: center;
+  }
+
+  button.button-style1 {
+    width: calc(100% - 40px);
+    font-size: 14px;
+    padding: 12px;
+    margin: 20px auto;
+    display: block;
+  }
 }
