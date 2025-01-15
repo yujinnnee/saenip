@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,11 @@
   <link rel="stylesheet" href="./src/styles/common.css">
   <script src="./src/js/index.js"></script>
 </head>
+
 <body>
+  <!-- 어두운 오버레이 -->
+  <div class="overlay" id="overlay"></div>
+
   <header class="header">
     <div class="logo" id="btnLogo">SAENIP</div>
     <nav>
@@ -18,6 +23,7 @@
       <a href="#" data-page="page4.html">해외 서비스 소개</a>
       <a href="#" data-page="page5.html">해외 요금 안내</a>
       <a href="#" data-page="page6.html">견적문의 및 오시는 길</a>
+      <button class="header-btn">카카오톡 상담문의</button>
     </nav>
     <div class="header-right">
       <div class="language-select">
@@ -29,20 +35,25 @@
       </div>
       <button class="header-btn">카카오톡 상담문의</button>
     </div>
+    <!-- 햄버거 메뉴 버튼 -->
+    <img class="hamburger-menu" src="src/images/hamburger.svg" id="hamburgerBtn" />
   </header>
 
   <main class="main-content">
-    <iframe class="main-iframe" src="" frameborder="0"  scrolling="no"></iframe>
+    <iframe class="main-iframe" src="" frameborder="0" scrolling="no"></iframe>
   </main>
 
   <footer class="footer">
     <div>
-      <p class="p-basic" style="color: var(--color-white); margin-top: 7px">(주)새닢&nbsp;&nbsp;&nbsp;대표자: 손재봉,&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283</p>
-      <p class="p-basic" style="color: var(--color-white)">대표 전화: 010-2565-4892,&nbsp;&nbsp;&nbsp;대표 메일: saenipkorea@daum.net</p>
+      <p class="p-basic" style="color: var(--color-white); margin-top: 7px">(주)새닢&nbsp;&nbsp;&nbsp;대표자:
+        손재봉,&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283</p>
+      <p class="p-basic" style="color: var(--color-white)">대표 전화: 010-2565-4892,&nbsp;&nbsp;&nbsp;대표 메일:
+        saenipkorea@daum.net</p>
     </div>
     <div>
       <button type="submit" class="submit-btn">견적문의 및 오시는 길</button>
     </div>
   </footer>
 </body>
+
 </html>
