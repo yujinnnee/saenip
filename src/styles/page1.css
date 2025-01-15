@@ -327,17 +327,19 @@
     padding: 0 20px; /* 좌우 여백 추가 */
   }
 
+  .container5 h1 {
+    font-size: 24px;
+  }
+
   .container6 {
     grid-template-columns: 1fr; /* 1열로 변경 */
-    gap: 20px; /* 간격 축소 */
-    padding: 0 20px; /* 좌우 여백 추가 */
   }
 
   .container6 .feature {
     width: 100%; /* 전체 너비 사용 */
-    padding: 10px; /* 내부 여백 축소 */
+    padding: 15px; /* 내부 여백 축소 */
   }
-
+  
   .container7 {
     grid-template-columns: 1fr; /* 1열로 변경 */
     gap: 20px; /* 간격 축소 */
@@ -345,12 +347,14 @@
   }
 
   .container8 .features {
+    display: grid;
     grid-template-columns: 1fr; /* 1열로 변경 */
     gap: 20px; /* 간격 축소 */
-  }
+    justify-items: center; /* 각 항목을 가로 중앙 정렬 */
+}
 
   .container8 .feature {
-    width: 100%; /* 전체 너비 사용 */
+    width: 80%; /* 전체 너비 사용 */
     padding: 10px; /* 내부 여백 축소 */
   }
 
@@ -358,6 +362,10 @@
     width: 100%; /* 전체 너비 사용 */
     padding: 0 20px; /* 좌우 여백 추가 */
     gap: 10px; /* 간격 축소 */
+  }
+
+  .container9 h1 {
+    font-size: 28px
   }
 
   .container9 .feature {
@@ -375,7 +383,7 @@
   }
 
   .container10 .text-container {
-    align-items: center; /* 중앙 정렬 */
+    align-items: flex-start; /* 중앙 정렬 */
     text-align: center; /* 텍스트 중앙 정렬 */
     margin: 10px 0; /* 상하 간격 추가 */
   }
@@ -383,26 +391,20 @@
   .container11 {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
-    align-items: center; /* 가로 중앙 정렬 */
     padding: 20px;
     text-align: center;
   }
 
   .timeline {
-    display: flex;
-    flex-direction: column; /* 세로 배치 */
-    align-items: center; /* 가로 중앙 정렬 */
-    gap: 10px; /* 점과 선 사이 간격 조정 */
-    margin-bottom: 20px;
+    display: none;
   }
 
   .timeline .line {
-    width: 2px; /* 세로 선 너비 조정 */
-    height: 50px; /* 세로 선 길이 */
-    background-color: var(--color-secondary);
+    display: none;
   }
 
   .timeline .dot {
+    display: none;
     width: 15px;
     height: 15px;
     background-color: var(--color-secondary);
@@ -412,13 +414,18 @@
   .timeline-content {
     display: flex;
     flex-direction: column; /* 세로 정렬 */
-    gap: 20px; /* 각 섹션 간 간격 조정 */
-    padding: 0 10px; /* 좌우 여백 추가 */
   }
 
-  .history-content {
-    text-align: center; /* 모바일에서 중앙 정렬 */
-    margin-bottom: 20px;
+  .container11 .history-content {
+    width: 100%; /* 모바일에서 전체 너비로 조정 */
+    text-align: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  .history-content span{
+    margin: 0;
+    padding: 0;
   }
 
   .blank {

@@ -32,7 +32,12 @@
 
 .step-image {
   flex-shrink: 0;
-  margin-left: 20px;
+  width: 200px;
+}
+
+.step-image img {
+  flex-shrink: 0;
+  width: 200px;
 }
 
 .container2 {
@@ -113,9 +118,13 @@
   }
 
   .step-image {
-    display: block; /* 인라인 요소가 아닌 블록 요소로 설정 */
-    align-items: center;
-    width: 100%; /* 이미지가 부모 요소 너비에 맞게 조정 */
+    flex-shrink: 0;
+    width: 100%;
+  }
+  
+  .step-image img {
+    flex-shrink: 0;
+    width: 100%;
   }
 
   .container2 {
