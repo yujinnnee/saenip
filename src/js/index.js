@@ -34,15 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지 불러오기 함수
   function LoadPage() {
     try {
-
       const page = localStorage.getItem("currentPage");
       const language = localStorage.getItem("language");
 
       // iframe src 설정
       iframe.src = `${domain}/src/pages/${language}/${page}`;
-
-      // URL 업데이트
-      history.pushState({ page: page }, '', `?${language}?${page.replace('.html', '')}`);
 
       // iframe 로드 시
       iframe.onload = () => {
@@ -149,6 +145,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 이벤트 설정
 
+  // 주소창 계속 업데이트
+  iframe.addEventListener('load', function () {
+    // URL 객체 생성
+    const parsedUrl = new URL(iframe.contentWindow.location.href);
+
+    // URL 경로에서 원하는 부분 추출
+    const pathParts = parsedUrl.pathname.split('/');  // 경로를 '/' 기준으로 나눔
+
+    const language = pathParts[3];  // '언어'
+    const page = pathParts[4];      // '페이지'
+
+    // URL 업데이트
+    history.replaceState({ page: page }, '', `/?${language}?${page.replace('.html', '')}`);
+  });
+
   // nav a 버튼 클릭 이벤트
   navA.forEach(link => link.addEventListener("click", event => {
     try {
@@ -194,7 +205,12 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // 페이지 로드시 이벤트
-  window.addEventListener('load', ChangeMenuStyle);
+  window.addEventListener('load', () => {
+    // iframe 높이 변경
+    UpdateIframeHeight();
+    // 메뉴 스타일 변경
+    ChangeMenuStyle();
+  });
 
   // 페이지 변경 시 이벤트
   window.addEventListener('resize', () => {
