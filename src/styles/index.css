@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  height: 10vh;
+  height: 70px;
   z-index: 1000;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
   white-space: nowrap;
@@ -20,8 +20,8 @@
   font-weight: bold;
   padding: 1vh;
   cursor: pointer;  
-  flex-grow: 2;
-  margin-left: 3vw;
+  flex-grow: 1;
+  margin-left: 1.6vw;
 }
 
 .header nav {
@@ -32,6 +32,8 @@
   white-space: nowrap; /* 링크들이 줄 바꿈 없이 한 줄에 표시되도록 설정 */
   flex-grow: 1;
   gap: 1.7vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
 
 .header nav a {
@@ -59,11 +61,11 @@
   background-color: var(--color-white);
   color: var(--color-secondary);
   border: none;
-  border-radius: 0.5vh;
+  border-radius: 0.8vh;
   font-size: 1.2rem;
   cursor: pointer;
   font-weight: bold;
-  padding: 1vh 0.8vw;
+  padding: 1vh 1vw;
 }
 
 .header .header-btn:hover {
@@ -83,12 +85,15 @@
   border-radius: 3vh;
   font-size: 1.2rem;
   padding: 1.2vh 1vw;
+  text-align: center;
+  align-items: center;
   cursor: pointer;
 }
 
 .language-dropdown option {
   background-color: var(--color-white);
   color: var(--color-dark);
+  /* 기본 화살표 숨기기 */
 }
 
 .header.scrolled {
@@ -146,7 +151,7 @@
   color: var(--color-white);
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.8vh;
+  font-size: 1.2rem;
 }
 
 .footer .submit-btn:hover {
@@ -154,38 +159,26 @@
 }
 
 /* 모바일 메뉴 */
-.mobile-menu {
-  display: none; /* 기본적으로 메뉴는 숨김 */
-  position: absolute;
-  top: 10vh; /* 헤더 아래에 위치 */
-  right: 3vw; /* 오른쪽에 위치 */
-  background-color: var(--color-primary);
-  padding: 1vh;
-  border-radius: 1vh;
-}
-
 .hamburger-menu {
   margin: 1vh;
   display: none;
-  width: 10vw;
+  height: 10vh;
   cursor: pointer;
 }
 
 /* 헤더 변경 */
-
-
+.header.small-screen .language-select {
+  display: none;
+}
 .header.small-screen .header-btn {
   display: none;
 }
-
 .header.small-screen .hamburger-menu {
   display: flex;
 }
-
 .header.small-screen.scrolled .hamburger-menu {
   filter: invert(1) grayscale(100%) contrast(100%);
 }
-
 .header nav .header-btn {
   display: none;
 }
@@ -193,10 +186,10 @@
 /* 기본 상태에서 nav는 화면 밖에 위치 */
 .header.small-screen nav {
   position: fixed;
-  top: 10vh;
+  top: 70px;
   right: -100vw; /* 화면 밖으로 위치 */
   width: max-content;
-  height: calc(100vh - 10vh);
+  height: calc(100% - 70px);
   background-color: var(--color-white);
   justify-content: flex-start;
   flex-direction: column;
@@ -213,7 +206,6 @@
 /* 메뉴 항목 스타일 */
 .header.small-screen nav a {
   color: var(--color-black);
-  font-size: 1.8vh;
   text-align: left;
   width: 100%;
   flex-grow: 0;
@@ -244,17 +236,18 @@
   right: 0;
 }
 
+/* 언어 변경 */
+.header.small-screen.open .language-select {
+  display: block;
+}
+
 .header.small-screen nav .header-btn {
   display: block;  
   background-color: var(--color-secondary);
   color: var(--color-white);
-  border-radius: 0.26vw; /* 5px -> 0.26vw */
-  font-size: 0.83vw; /* 16px -> 0.83vw */
-  cursor: pointer;
   position: absolute; /* 절대 위치 지정 */
   bottom: 4%; /* 화면의 가장 아래에 배치 */
 }
-
 
 /* 오버레이 어두운 배경 */
 .overlay.small-screen.open {
@@ -266,4 +259,8 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000; /* nav보다 아래 */
   display: block;
+}
+
+.footer.small-screen {
+  position: inherit;
 }
