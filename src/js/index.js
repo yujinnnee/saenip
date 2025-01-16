@@ -15,15 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 변경시점 저장 변수
   let changeWidth = 0;                                         // 화면 넓이 변경 변수
+  let language = "ko";
+  let currentPage ="page1.html";
 
-  // 언어와 페이지 불러오기
-  const [language, page] = window.location.search.substring(1).split('?');
+  // url 검사
+  const params = new URLSearchParams(window.location.search);
+  const first = params.get('lang');
+  const second = params.get('page');
 
   // 스토리지 초기화
-  if (language && language.trim()) localStorage.setItem("language", language.trim());
-  else localStorage.setItem("language", "ko");
-  if (language && language.trim()) localStorage.setItem("currentPage", `${page.trim()}.html`);
-  else localStorage.setItem("currentPage", "page1.html");
+  if (first && first.trim()) language = first.trim();
+  if (second && second.trim()) currentPage = `${second.trim()}.html`;
 
   // 페이지 불러오기
   ChangeLanguage();
@@ -34,11 +36,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지 불러오기 함수
   function LoadPage() {
     try {
-      const page = localStorage.getItem("currentPage");
-      const language = localStorage.getItem("language");
-
       // iframe src 설정
-      iframe.src = `${domain}/src/pages/${language}/${page}`;
+      iframe.src = `${domain}/src/pages/${language}/${currentPage}`;
 
       // iframe 로드 시
       iframe.onload = () => {
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function UpdateIframeHeight() {
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     if (iframeDoc && iframeDoc.body) {
-      mainContent.style.height = `${iframeDoc.body.scrollHeight + footer.offsetHeight}px`;
+      mainContent.style.height = `${iframeDoc.body.scrollHeight + (footer.classList.contains('small-screen') ? 0 : footer.offsetHeight)}px`;
     }
   }
 
@@ -121,12 +120,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // 모바일 메뉴바로 변경 함수
   function MobileMenu() {
     header.classList.add('small-screen');
+    footer.classList.add('small-screen');
     overlay.classList.toggle('small-screen'); // 오버레이 표시/숨기기
   }
 
   // 웹 메뉴바로 변경 함수
   function WebMenu() {
     header.classList.remove('small-screen', 'open');
+    footer.classList.remove('small-screen', 'open');
     overlay.classList.remove('small-screen', 'open');
   }
 
@@ -157,32 +158,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const page = pathParts[4];      // '페이지'
 
     // URL 업데이트
-    history.replaceState({ page: page }, '', `/?${language}?${page.replace('.html', '')}`);
+    history.replaceState({ page: page }, '', `/?lang=${language}&page=${page.replace('.html', '')}`);
+
+    // 모바일일 경우 메뉴 닫기
+    MenuClose();
   });
 
   // nav a 버튼 클릭 이벤트
   navA.forEach(link => link.addEventListener("click", event => {
-    try {
-      // a 이벤트 막기
-      event.preventDefault();
-
-      // 스토리지에 저장
-      localStorage.setItem("currentPage", event.currentTarget.getAttribute("data-page"));
-    } catch (error) {
-      console.log(`페이지 저장 실패 : ${error.message}`);
-    }
+    // a 이벤트 막기
+    event.preventDefault();
+    currentPage = event.currentTarget.getAttribute("data-page");
     // 페이지 로드
     LoadPage();
   }));
 
   // 언어 선택 박스 변경 이벤트
   sbxLanguage.addEventListener("change", () => {
-    try {
-      // 스토리지에 저장
-      localStorage.setItem("language", sbxLanguage.value);
-    } catch (error) {
-      console.log(`언어 변경 실패 : ${error.message}`);
-    }
+    language = sbxLanguage.value;
     // 언어 변경
     ChangeLanguage();
     // 페이지 로드
@@ -193,6 +186,13 @@ document.addEventListener("DOMContentLoaded", function () {
   hamberger.addEventListener('click', () => {
     if (header.classList.contains('open')) MenuClose(); // 메뉴가 열려 있다면 닫기
     else MenuOpen(); // 메뉴가 닫혀 있다면 열기
+  });
+
+  // 견적문의 및 오시는 길 버튼 클릭
+  document.getElementById('page6Btn').addEventListener('click', () => {
+    currentPage = "page6.html";
+    // 페이지 로드
+    LoadPage();
   });
 
   // overlay 클릭 이벤트
