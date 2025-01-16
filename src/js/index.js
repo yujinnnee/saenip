@@ -207,7 +207,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지 로드시 이벤트
   window.addEventListener('load', () => {
     // iframe 높이 변경
-    LoadPage();
+    UpdateIframeHeight();
     // 메뉴 스타일 변경
     ChangeMenuStyle();
   });
