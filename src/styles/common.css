@@ -2,14 +2,14 @@
 @import './colors.css';
 
 @font-face {
-  font-family: 'NanumSquareRoundOTFEB';
-  src: url('../fonts/NanumSquareRoundOTFEB.otf') format('truetype');
+  font-family: 'NanumGothicBold';
+  src: url('../fonts/NanumGothicBold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'NanumSquareRoundOTFEB', sans-serif;
+  font-family: 'NanumGothicBold', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -21,7 +21,7 @@ input,
 textarea,
 select,
 button {
-  font-family: 'NanumSquareRoundOTFEB', sans-serif;
+  font-family: 'NanumGothicBold', sans-serif;
 }
 
 *, *::before, *::after {
@@ -157,4 +157,23 @@ section.visible {
     margin: 20px auto; /* 상단 여백 및 가로 중앙 정렬 */
     display: block; /* 버튼을 블록 요소로 변경 */
   }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+table th, table td {
+  border: 1px solid var(--color-dark-gray);
+  padding: 0.5rem;
+  text-align: center;
+}
+table th {
+  background:  var(--color-secondary);
+  color: var(--color-white);
+}
+table td {
+  background-color: var(--color-white); /* 테이블 셀 배경색을 흰색으로 설정 */
 }
