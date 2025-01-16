@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
       iframe.src = `${domain}/src/pages/${language}/${page}`;
 
       // URL 업데이트
-      history.pushState({ page: page }, '', `?${language}?${page.replace('.html', '')}`);
+      history.pushState({ page: page }, '', `/?${language}?${page.replace('.html', '')}`);
 
       // iframe 로드 시
       iframe.onload = () => {
