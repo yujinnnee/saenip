@@ -1,5 +1,5 @@
 const domain = 'http://127.0.0.1:5501';
-// const domain = 'https://yujinnnee.github.io/saenip/';
+//const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -16,9 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // 변경시점 저장 변수
   let changeWidth = 0;                                         // 화면 넓이 변경 변수
 
+  // 언어와 페이지 불러오기
+  const [language, page] = window.location.search.substring(1).split('?');
+
   // 스토리지 초기화
-  localStorage.setItem("language", "ko");
-  localStorage.setItem("currentPage", "page1.html");
+  if (language && language.trim()) localStorage.setItem("language", language.trim());
+  else localStorage.setItem("language", "ko");
+  if (language && language.trim()) localStorage.setItem("currentPage", `${page.trim()}.html`);
+  else localStorage.setItem("currentPage", "page1.html");
 
   // 페이지 불러오기
   ChangeLanguage();
@@ -29,7 +34,15 @@ document.addEventListener("DOMContentLoaded", function () {
   // 페이지 불러오기 함수
   function LoadPage() {
     try {
-      iframe.src = `${domain}/src/pages/${localStorage.getItem("language")}/${localStorage.getItem("currentPage")}`; // iframe에 URL 설정
+
+      const page = localStorage.getItem("currentPage");
+      const language = localStorage.getItem("language");
+
+      // iframe src 설정
+      iframe.src = `${domain}/src/pages/${language}/${page}`;
+
+      // URL 업데이트
+      history.pushState({ page: page }, '', `?${language}?${page.replace('.html', '')}`);
 
       // iframe 로드 시
       iframe.onload = () => {
@@ -206,8 +219,8 @@ const languages = {
     languageKorean: "한국어",
     languageEnglish: "English",
     languageChinese: "中文",
-    companyInfo: "(주)새닢&nbsp;&nbsp;&nbsp;대표자: 손재봉,&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283",
-    contactInfo: "대표 전화: 010-2565-4892,&nbsp;&nbsp;&nbsp;대표 메일: saenipkorea@daum.net",
+    companyInfo: "(주)새닢&nbsp;&nbsp;&nbsp;대표자: 손재봉&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283",
+    contactInfo: "대표 전화: 010-2565-4892&nbsp;&nbsp;&nbsp;대표 메일: saenipkorea@daum.net",
     inquiryBtn: "견적문의 및 오시는 길"
   },
   en: {
@@ -222,8 +235,8 @@ const languages = {
     languageKorean: "Korean",
     languageEnglish: "English",
     languageChinese: "Chinese",
-    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Jaebong Son,&nbsp;&nbsp;&nbsp;Business Number: 121-81-99283",
-    contactInfo: "Main Phone: 010-2565-4892,&nbsp;&nbsp;&nbsp;Email: saenipkorea@daum.net",
+    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Jaebong Son&nbsp;&nbsp;&nbsp;Business Number: 121-81-99283",
+    contactInfo: "Main Phone: 010-2565-4892&nbsp;&nbsp;&nbsp;Email: saenipkorea@daum.net",
     inquiryBtn: "Inquiry and Directions"
   },
   zh: {
@@ -238,8 +251,8 @@ const languages = {
     languageKorean: "韩语",
     languageEnglish: "英语",
     languageChinese: "中文",
-    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Son Jaebong,&nbsp;&nbsp;&nbsp;公司注册号: 121-81-99283",
-    contactInfo: "联系电话: 010-2565-4892,&nbsp;&nbsp;&nbsp;邮箱: saenipkorea@daum.net",
+    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Son Jaebong&nbsp;&nbsp;&nbsp;公司注册号: 121-81-99283",
+    contactInfo: "联系电话: 010-2565-4892&nbsp;&nbsp;&nbsp;邮箱: saenipkorea@daum.net",
     inquiryBtn: "询价与方向"
   }
 };
