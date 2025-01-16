@@ -171,10 +171,13 @@ p {
   text-align: center; /* 이미지와 텍스트를 가운데 정렬 */
 }
 
-.container5 .image {
+.container5 .image-box3 .image {
   width: 100%; /* 이미지를 박스 크기에 맞게 조정 */
   height: auto; /* 비율에 맞게 높이 자동 조정 */
   aspect-ratio: 1 / 1;
   object-fit: contain; /* 비율을 유지하면서 컨테이너를 채움 */
   display: block; /* 불필요한 여백 제거 */
+  padding: 0.8vh;
+  border-radius: 40px;
+  background-color: var(--color-white);
 }

@@ -9,7 +9,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  height: 70px;
+  height: 60px;
   z-index: 1000;
   box-shadow: 0 0.5vh 1vh rgba(0, 0, 0, 0.1);
   white-space: nowrap;
@@ -63,9 +63,9 @@
   border: none;
   border-radius: 0.8vh;
   font-size: 1.2rem;
+  padding: 0.4vh 0.8vw;
   cursor: pointer;
   font-weight: bold;
-  padding: 1vh 1vw;
 }
 
 .header .header-btn:hover {
@@ -82,10 +82,10 @@
   background-color: transparent;
   color: var(--color-white);
   border: 0.3vh solid var(--color-white);
-  border-radius: 3vh;
+  border-radius: 80px;
   font-size: 1.2rem;
-  padding: 1.2vh 1vw;
-  text-align: center;
+  padding: 0.4vh 0.4vw;
+  text-align: left;
   align-items: center;
   cursor: pointer;
 }
@@ -93,7 +93,6 @@
 .language-dropdown option {
   background-color: var(--color-white);
   color: var(--color-dark);
-  /* 기본 화살표 숨기기 */
 }
 
 .header.scrolled {
@@ -162,7 +161,7 @@
 .hamburger-menu {
   margin: 1vh;
   display: none;
-  height: 10vh;
+  height: 5vh;
   cursor: pointer;
 }
 
@@ -186,10 +185,10 @@
 /* 기본 상태에서 nav는 화면 밖에 위치 */
 .header.small-screen nav {
   position: fixed;
-  top: 70px;
+  top: 60px;
   right: -100vw; /* 화면 밖으로 위치 */
   width: max-content;
-  height: calc(100% - 70px);
+  height: calc(100% - 60px);
   background-color: var(--color-white);
   justify-content: flex-start;
   flex-direction: column;
