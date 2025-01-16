@@ -121,6 +121,7 @@ p {
   display: flex;
   gap: 40px;
   justify-content: center;
+  align-items: center;
   margin-bottom: 5%;
 }
 
@@ -173,4 +174,7 @@ p {
 .container5 .image {
   width: 100%; /* 이미지를 박스 크기에 맞게 조정 */
   height: auto; /* 비율에 맞게 높이 자동 조정 */
+  aspect-ratio: 1 / 1;
+  object-fit: contain; /* 비율을 유지하면서 컨테이너를 채움 */
+  display: block; /* 불필요한 여백 제거 */
 }

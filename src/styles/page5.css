@@ -40,3 +40,13 @@
     background-position: -100% 0; /* 왼쪽으로 이동 */
   }
 }
+
+.container2 {
+  width: 80%;
+  padding-right: 4rem;
+  padding-left: 4rem;
+}
+
+.container2 p {
+  text-align: left;
+}
