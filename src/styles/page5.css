@@ -25,10 +25,10 @@
 .marquee {
   position: relative;
   width: 80%;
-  height: 120px;
-  background: url('../images/image.png') repeat-x; /* 반복 배경 */
+  height: 50px;
+  background: url('../images/page5/1.png') repeat-x; /* 반복 배경 */
   background-size: contain; /* 이미지 크기 조정 */
-  animation: scroll-bg 10s linear infinite; /* 배경 스크롤 애니메이션 */
+  animation: scroll-bg 20s linear infinite; /* 배경 스크롤 애니메이션 */
   margin-bottom: 3%;
 }
 
