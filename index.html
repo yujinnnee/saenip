@@ -15,28 +15,28 @@
   <div class="overlay" id="overlay"></div>
 
   <header class="header">
-    <div class="logo" id="btnLogo">SAENIP</div>
+    <div class="logo" id="btnLogo" data-text-key="logo">SAENIP</div>
     <nav>
-      <a href="#" data-page="page1.html">홈</a>
-      <a href="#" data-page="page2.html">국내 서비스 소개</a>
-      <a href="#" data-page="page3.html">국내 요금 안내</a>
-      <a href="#" data-page="page4.html">해외 서비스 소개</a>
-      <a href="#" data-page="page5.html">해외 요금 안내</a>
-      <a href="#" data-page="page6.html">견적문의 및 오시는 길</a>
-      <button class="header-btn">카카오톡 상담문의</button>
+      <a href="#" data-page="page1.html" data-text-key="home">홈</a>
+      <a href="#" data-page="page2.html" data-text-key="domesticServices">국내 서비스 소개</a>
+      <a href="#" data-page="page3.html" data-text-key="domesticPricing">국내 요금 안내</a>
+      <a href="#" data-page="page4.html" data-text-key="internationalServices">해외 서비스 소개</a>
+      <a href="#" data-page="page5.html" data-text-key="internationalPricing">해외 요금 안내</a>
+      <a href="#" data-page="page6.html" data-text-key="inquiry">견적문의 및 오시는 길</a>
+      <button class="header-btn" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
     </nav>
     <div class="header-right">
       <div class="language-select">
         <select class="language-dropdown" id="sbxLanguage">
-          <option value="ko">한국어</option>
-          <option value="en">English</option>
-          <option value="zh">中文</option>
+          <option value="ko" data-text-key="languageKorean">한국어</option>
+          <option value="en" data-text-key="languageEnglish">English</option>
+          <option value="zh" data-text-key="languageChinese">中文</option>
         </select>
       </div>
-      <button class="header-btn">카카오톡 상담문의</button>
+      <button class="header-btn" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
     </div>
     <!-- 햄버거 메뉴 버튼 -->
-    <img class="hamburger-menu" src="src/images/hamburger.svg" id="hamburgerBtn" />
+    <img class="hamburger-menu" src="src/icons/hamburger.svg" id="hamburgerBtn" />
   </header>
 
   <main class="main-content">
@@ -45,13 +45,11 @@
 
   <footer class="footer">
     <div>
-      <p class="p-basic" style="color: var(--color-white); margin-top: 7px">(주)새닢&nbsp;&nbsp;&nbsp;대표자:
-        손재봉,&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283</p>
-      <p class="p-basic" style="color: var(--color-white)">대표 전화: 010-2565-4892,&nbsp;&nbsp;&nbsp;대표 메일:
-        saenipkorea@daum.net</p>
+      <p class="p-basic" style="color: var(--color-white); margin-top: 7px" data-text-key="companyInfo">(주)새닢&nbsp;&nbsp;&nbsp;대표자: 손재봉,&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283</p>
+      <p class="p-basic" style="color: var(--color-white)" data-text-key="contactInfo">대표 전화: 010-2565-4892,&nbsp;&nbsp;&nbsp;대표 메일: saenipkorea@daum.net</p>
     </div>
     <div>
-      <button type="submit" class="submit-btn">견적문의 및 오시는 길</button>
+      <button type="submit" class="submit-btn" data-text-key="inquiryBtn">견적문의 및 오시는 길</button>
     </div>
   </footer>
 </body>
