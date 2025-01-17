@@ -1,4 +1,4 @@
-// const domain = 'http://127.0.0.1:5501';
+//const domain = 'http://127.0.0.1:5501';
 const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -103,9 +103,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // 변경할 요소 리스트 불러오기
     const elements = document.querySelectorAll('[data-text-key]');
 
-    // 언어 불러오기
-    const language = localStorage.getItem("language");
-
     // 언어에 따라 텍스트 변경
     elements.forEach(element => {
       const key = element.getAttribute('data-text-key');
@@ -154,11 +151,13 @@ document.addEventListener("DOMContentLoaded", function () {
     // URL 경로에서 원하는 부분 추출
     const pathParts = parsedUrl.pathname.split('/');  // 경로를 '/' 기준으로 나눔
 
-    const language = pathParts[3];  // '언어'
-    const page = pathParts[4];      // '페이지'
+    const language = pathParts[pathParts.length - 2];  // '언어'
+    const page = pathParts[pathParts.length - 1];      // '페이지'
+
+    console.log(pathParts);
 
     // URL 업데이트
-    history.replaceState({ page: page }, '', `/?lang=${language}&page=${page.replace('.html', '')}`);
+    history.replaceState({ page: page }, '', `?lang=${language}&page=${page.replace('.html', '')}`);
 
     // 모바일일 경우 메뉴 닫기
     MenuClose();
