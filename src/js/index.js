@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const page = pathParts[pathParts.length - 1];      // '페이지'
 
     // URL 업데이트
-    history.replaceState({ page: page }, '', `https://${domain}?lang=${language}&page=${page.replace('.html', '')}`);
+    history.replaceState({ page: page }, '', `?lang=${language}&page=${page.replace('.html', '')}`);
 
     // 모바일일 경우 메뉴 닫기
     MenuClose();
