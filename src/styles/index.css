@@ -263,3 +263,13 @@
 .footer.small-screen {
   position: inherit;
 }
+
+.companyInfo {
+  display: flex;
+  flex-wrap: wrap; /* 화면이 좁을 경우 자동으로 줄바꿈 */
+}
+.companyInfo p {
+  display: inline;
+  color: var(--color-white);
+  margin-right: 1vw;
+}
