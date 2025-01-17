@@ -11,7 +11,8 @@
 
 .main {
   display: block;
-  padding: 220px 150px;
+  padding: 0;
+  margin: 0;
   background-image: url('../../images/page1/1.jpg'); /* 배경 이미지 경로 */
   background-size: cover; /* 배경 이미지 확대/축소 */
   background-position: center; /* 배경 이미지 중앙 정렬 */
@@ -311,7 +312,7 @@
   }
 
   .container1 {
-    width: 100vw; /* 뷰포트 너비의 100%로 설정 */
+    width: 100%; /* 뷰포트 너비의 100%로 설정 */
     padding: 0; /* 불필요한 내부 여백 제거 */
     box-sizing: border-box; /* 패딩 포함 계산 */
   }
@@ -355,7 +356,7 @@
   }
 
   .container5 h1 {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .container6 {
@@ -371,6 +372,18 @@
     grid-template-columns: 1fr; /* 1열로 변경 */
     gap: 20px; /* 간격 축소 */
     padding: 0 20px; /* 좌우 여백 추가 */
+  }
+
+  .container7-text h1 {
+    font-size: 20px;
+  }
+
+  .container7-text h3 {
+    font-size: 16px;
+  }
+
+  .container8 h1 {
+    font-size: 28px;
   }
 
   .container8 .features {
@@ -392,7 +405,11 @@
   }
 
   .container9 h1 {
-    font-size: 28px
+    font-size: 24px
+  }
+
+  .container9 h2 {
+    font-size: 20px
   }
 
   .container9 .feature {
@@ -413,6 +430,14 @@
     align-items: flex-start; /* 중앙 정렬 */
     text-align: center; /* 텍스트 중앙 정렬 */
     margin: 10px 0; /* 상하 간격 추가 */
+  }
+
+  .container10 h2 {
+    font-size: 20px
+  }
+
+  .container10 h3 {
+    font-size: 18px
   }
 
   .container11 {
@@ -450,9 +475,10 @@
     padding: 0;
   }
 
-  .history-content span{
-    margin: 0;
-    padding: 0;
+  .history-content span {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline; /* 불필요한 block 스타일 방지 */
   }
 
   .blank {
