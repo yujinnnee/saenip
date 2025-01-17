@@ -154,8 +154,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // URL 경로에서 원하는 부분 추출
     const pathParts = parsedUrl.pathname.split('/');  // 경로를 '/' 기준으로 나눔
 
-    const language = pathParts[3];  // '언어'
-    const page = pathParts[4];      // '페이지'
+    const language = pathParts[pathParts.length - 2];  // '언어'
+    const page = pathParts[pathParts.length - 1];      // '페이지'
 
     // URL 업데이트
     history.replaceState({ page: page }, '', `/?lang=${language}&page=${page.replace('.html', '')}`);
