@@ -4,7 +4,8 @@
 
 .container1 .img-container {
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬 */
+  justify-content: flex-start;
+  /* 왼쪽 정렬 */
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -16,8 +17,10 @@
   margin-right: 4vw;
 }
 
-.img-container h1, .img-container p {
-  text-align: left; /* 왼쪽 정렬 */
+.img-container h1,
+.img-container p {
+  text-align: left;
+  /* 왼쪽 정렬 */
 }
 
 .img-container h1 {
@@ -38,30 +41,56 @@
   position: relative;
   width: 80%;
   height: 50px;
-  background: url('../images/page5/1.png') repeat-x; /* 반복 배경 */
-  background-size: contain; /* 이미지 크기 조정 */
-  animation: slide-bg 20s linear infinite; /* 배경 스크롤 애니메이션 */
+  background: url('../images/page5/1.png') repeat-x;
+  background-size: contain;
+  /* 이미지 비율 유지 */
+  animation: scroll-bg 20s linear infinite;
   margin-bottom: 3%;
+  overflow: hidden;
+  /* 잘림 방지 */
 }
 
-@keyframes slide-bg {
+@keyframes scroll-bg {
   0% {
-    background-position: 0 0; /* 시작 위치 */
+    background-position: 0 0;
   }
+
   100% {
-    background-position: -100% 0; /* 끝 위치 */
+    background-position: calc(-100% + 50px) 0;
+    /* 배경 비율에 맞춘 이동 */
   }
 }
 
-@media (max-width: 785px) {
+
+@media (max-width: 786px) {
+  .marquee {
+    background-size: contain;
+    /* 이미지 비율 유지 */
+    animation: scroll-bg 15s linear infinite;
+    /* 애니메이션 속도 조정 */
+  }
+
+  @keyframes scroll-bg {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: calc(-100% - 200px) 0;
+      /* 모바일 크기 조정 */
+    }
+  }
+
   .container1 {
     width: 100%;
     padding: 4vw;
   }
 
   .container1 .img-container {
-    flex-direction: column; /* 요소들을 수직으로 배치 */
-    align-items: flex-start; /* 요소를 왼쪽 정렬 */
+    flex-direction: column;
+    /* 요소들을 수직으로 배치 */
+    align-items: flex-start;
+    /* 요소를 왼쪽 정렬 */
   }
 
   .container1 .img-container img {
@@ -72,7 +101,8 @@
 
   .container1 .img-container h1,
   .container1 .img-container p {
-    text-align: left; /* 텍스트를 왼쪽 정렬 */
+    text-align: left;
+    /* 텍스트를 왼쪽 정렬 */
   }
 
   .container2 {
