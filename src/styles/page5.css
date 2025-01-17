@@ -2,43 +2,29 @@
   width: 80%;
 }
 
-.img-container {
+.container1 .img-container {
   display: flex;
-  gap: 90px;
-  justify-content: flex-start; /* 왼쪽 정렬 */
+  justify-content: flex-start;
+  /* 왼쪽 정렬 */
   margin-top: 5%;
   margin-bottom: 5%;
 }
 
-.img-container img {
-  width: 36%;
+.container1 .img-container img {
+  width: 36vw;
+  height: auto;
+  object-fit: contain;
+  margin-right: 4vw;
 }
 
-.img-container h1, .img-container p {
-  text-align: left; /* 왼쪽 정렬 */
+.img-container h1,
+.img-container p {
+  text-align: left;
+  /* 왼쪽 정렬 */
 }
 
 .img-container h1 {
   margin-bottom: 2%;
-}
-
-.marquee {
-  position: relative;
-  width: 80%;
-  height: 50px;
-  background: url('../images/page5/1.png') repeat-x; /* 반복 배경 */
-  background-size: contain; /* 이미지 크기 조정 */
-  animation: scroll-bg 20s linear infinite; /* 배경 스크롤 애니메이션 */
-  margin-bottom: 3%;
-}
-
-@keyframes scroll-bg {
-  0% {
-    background-position: 0 0; /* 시작 위치 */
-  }
-  100% {
-    background-position: -100% 0; /* 왼쪽으로 이동 */
-  }
 }
 
 .container2 {
@@ -49,4 +35,78 @@
 
 .container2 p {
   text-align: left;
+}
+
+.marquee {
+  position: relative;
+  width: 80%;
+  height: 50px;
+  background: url('../images/page5/1.png') repeat-x;
+  background-size: contain;
+  /* 이미지 비율 유지 */
+  animation: scroll-bg 20s linear infinite;
+  margin-bottom: 3%;
+  overflow: hidden;
+  /* 잘림 방지 */
+}
+
+@keyframes scroll-bg {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: calc(-100% + 50px) 0;
+    /* 배경 비율에 맞춘 이동 */
+  }
+}
+
+
+@media (max-width: 786px) {
+  .marquee {
+    background-size: contain;
+    /* 이미지 비율 유지 */
+    animation: scroll-bg 15s linear infinite;
+    /* 애니메이션 속도 조정 */
+  }
+
+  @keyframes scroll-bg {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: calc(-100% - 200px) 0;
+      /* 모바일 크기 조정 */
+    }
+  }
+
+  .container1 {
+    width: 100%;
+    padding: 4vw;
+  }
+
+  .container1 .img-container {
+    flex-direction: column;
+    /* 요소들을 수직으로 배치 */
+    align-items: flex-start;
+    /* 요소를 왼쪽 정렬 */
+  }
+
+  .container1 .img-container img {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 0.2vh;
+  }
+
+  .container1 .img-container h1,
+  .container1 .img-container p {
+    text-align: left;
+    /* 텍스트를 왼쪽 정렬 */
+  }
+
+  .container2 {
+    width: 100%;
+    padding: 4vw;
+  }
 }
