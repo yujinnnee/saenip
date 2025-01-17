@@ -103,7 +103,7 @@ section.visible {
   }
 
   section {
-    padding: 40px 1px; /* 섹션의 상하 여백 줄임 */
+    padding: 40px 20px; /* 섹션의 상하 여백 줄임 */
     text-align: center; /* 모든 섹션 중앙 정렬 */
     width: 100%;
   }
