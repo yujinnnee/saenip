@@ -235,8 +235,11 @@ const languages = {
     languageKorean: "한국어",
     languageEnglish: "English",
     languageChinese: "中文",
-    companyInfo: "(주)새닢&nbsp;&nbsp;&nbsp;대표자: 손재봉&nbsp;&nbsp;&nbsp;사업자번호: 121-81-99283",
-    contactInfo: "대표 전화: 010-2565-4892&nbsp;&nbsp;&nbsp;대표 메일: saenipkorea@daum.net",
+    companyInfo1: "(주)새닢",
+    companyInfo2: "대표자: 손재봉",
+    companyInfo3: "사업자번호: 121-81-99283",
+    companyInfo4: "대표 전화: 010-2565-4892",
+    companyInfo5: "대표 메일: saenipkorea@daum.net",
     inquiryBtn: "견적문의 및 오시는 길"
   },
   en: {
@@ -251,8 +254,11 @@ const languages = {
     languageKorean: "Korean",
     languageEnglish: "English",
     languageChinese: "Chinese",
-    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Jaebong Son&nbsp;&nbsp;&nbsp;Business Number: 121-81-99283",
-    contactInfo: "Main Phone: 010-2565-4892&nbsp;&nbsp;&nbsp;Email: saenipkorea@daum.net",
+    companyInfo1: "(주)SAENIP",
+    companyInfo2: "CEO: Jaebong Son",
+    companyInfo3: "Business Number: 121-81-99283",
+    companyInfo4: "Main Phone: 010-2565-4892",
+    companyInfo5: "Email: saenipkorea@daum.net",
     inquiryBtn: "Inquiry and Directions"
   },
   zh: {
@@ -267,8 +273,11 @@ const languages = {
     languageKorean: "韩语",
     languageEnglish: "英语",
     languageChinese: "中文",
-    companyInfo: "(주)SAENIP&nbsp;&nbsp;&nbsp;CEO: Son Jaebong&nbsp;&nbsp;&nbsp;公司注册号: 121-81-99283",
-    contactInfo: "联系电话: 010-2565-4892&nbsp;&nbsp;&nbsp;邮箱: saenipkorea@daum.net",
+    companyInfo1: "(주)SAENIP",
+    companyInfo2: "CEO: Jaebong Son",
+    companyInfo3: "公司注册号: 121-81-99283",
+    companyInfo4: "联系电话: 010-2565-4892",
+    companyInfo5: "邮箱: saenipkorea@daum.net",
     inquiryBtn: "询价与方向"
   }
 };
