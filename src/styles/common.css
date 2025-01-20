@@ -24,6 +24,14 @@ button {
   font-family: 'NanumGothicBold', sans-serif;
 }
 
+img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover; /* 이미지를 원본 비율로 유지하며 꽉 차게 */
+  object-position: center; /* 이미지 중심 위치 */
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
