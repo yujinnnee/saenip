@@ -1,5 +1,5 @@
-//const domain = 'http://127.0.0.1:5501';
-const domain = 'https://yujinnnee.github.io/saenip/';
+const domain = 'http://127.0.0.1:5501';
+//const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (second && second.trim()) currentPage = `${second.trim()}.html`;
 
   // 페이지 불러오기
+  sbxLanguage.value = language;
   ChangeLanguage();
   LoadPage();
 
@@ -154,8 +155,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const language = pathParts[pathParts.length - 2];  // '언어'
     const page = pathParts[pathParts.length - 1];      // '페이지'
 
-    console.log(pathParts);
-
     // URL 업데이트
     history.replaceState({ page: page }, '', `?lang=${language}&page=${page.replace('.html', '')}`);
 
@@ -231,9 +230,6 @@ const languages = {
     internationalPricing: "해외 요금 안내",
     inquiry: "견적문의 및 오시는 길",
     kakaoConsultation: "카카오톡 상담문의",
-    languageKorean: "한국어",
-    languageEnglish: "English",
-    languageChinese: "中文",
     companyInfo1: "(주)새닢",
     companyInfo2: "대표자: 손재봉",
     companyInfo3: "사업자번호: 121-81-99283",
@@ -250,9 +246,6 @@ const languages = {
     internationalPricing: "International Pricing",
     inquiry: "Inquiry and Directions",
     kakaoConsultation: "KakaoTalk Consultation",
-    languageKorean: "Korean",
-    languageEnglish: "English",
-    languageChinese: "Chinese",
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "Business Number: 121-81-99283",
@@ -269,9 +262,6 @@ const languages = {
     internationalPricing: "国际费用指南",
     inquiry: "询价与方向",
     kakaoConsultation: "KakaoTalk 咨询",
-    languageKorean: "韩语",
-    languageEnglish: "英语",
-    languageChinese: "中文",
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "公司注册号: 121-81-99283",
