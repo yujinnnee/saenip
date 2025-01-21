@@ -7,7 +7,7 @@
 }
 
 .container1 {
-  width: 36%;
+  width: 600px;
 }
 
 .container1 .container1-steps {
@@ -20,7 +20,7 @@
 
 .container1 .container1-steps .step {
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 5fr 3fr;
   padding: 10px;
   border: none;
   border-radius: 15px;
