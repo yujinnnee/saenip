@@ -238,7 +238,7 @@
 }
 
 .container10 img{
-  width: 100%;
+  width: 80%;
   height: 100%;
   aspect-ratio: unset;
   object-fit: contain;
@@ -390,6 +390,10 @@
   }
 
   .container10 {
+    width: 100%;
+  }
+
+  .container10 img {
     width: 100%;
   }
 
