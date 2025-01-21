@@ -3,8 +3,6 @@
 .container1-content {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   gap: 80px;
   width:800px;
   margin: 30px;
@@ -12,7 +10,6 @@
 
 .container1-info {
   text-align: left;
-  margin-bottom: 4%;
 }
 
 .map {
