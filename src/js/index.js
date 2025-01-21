@@ -1,4 +1,4 @@
-// const domain = 'http://127.0.0.1:5501';
+// const domain = 'http://127.0.0.1:5502';
 const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
