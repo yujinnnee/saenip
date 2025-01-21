@@ -88,9 +88,7 @@
 
   .container1 .img-container {
     flex-direction: column;
-    /* 요소들을 수직으로 배치 */
     align-items: flex-start;
-    /* 요소를 왼쪽 정렬 */
   }
 
   .container1 .img-container img {
@@ -102,11 +100,11 @@
   .container1 .img-container h1,
   .container1 .img-container p {
     text-align: left;
-    /* 텍스트를 왼쪽 정렬 */
   }
 
   .container2 {
     width: 100%;
-    padding: 4vw;
+    padding-right: 1vw;
+    padding-left: 1vw;
   }
 }

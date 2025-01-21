@@ -1,23 +1,26 @@
 @import './fontSize.css';
 
-.container1 {
-  width: 100%;
-  background-color: var(--color-light);
+.container0 h1,
+.container0 h3,
+.container0 button {
+  margin-bottom: 0.4vh;
 }
 
-.container1-steps {
+.container1 {
+  width: 36%;
+}
+
+.container1 .container1-steps {
   display: flex;
   flex-direction: column;
-  gap: 30px;
   justify-content: center;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  gap: 0.4vh;
+  margin-top: 0.8vh;
 }
 
-.step {
-  display: flex;
-  align-items: center;
+.container1 .container1-steps .step {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
   padding: 10px;
   border: none;
   border-radius: 15px;
@@ -25,150 +28,85 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.step-text {
-  flex: 1;
-  text-align: center;
-}
-
-.step-image {
-  flex-shrink: 0;
-  width: 200px;
-}
-
-.step-image img {
-  flex-shrink: 0;
-  width: 200px;
+.container1 .container1-steps .step-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
 }
 
 .container2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 (필요한 경우) */
+  gap: 0.4vh;
 }
 
-.container2 .feature {
-  background-color: var(--color-white);
+.container2 .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4vh;
+}
+
+.container2 .features .feature {
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  gap: 0.4vh;
+}
+
+.container2 .features .feature img {
   border-radius: 10px;
-  text-align: center;
+  border: 1px solid var(--color-light-gray);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.container2 .feature p {
-  margin:0 30px 25px 30px;
+.container2 .features .feature .feature-content {
+  display: flex;
+  flex-direction: column;
 }
 
-.container2 .feature img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+.container2 button {
+  margin-top: 0.4vh;
 }
 
 .container3 {
+  width: 80%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  gap: 80px;
-  width: 100%;
+  justify-content: space-between;
 }
 
-.container3 > div:first-child {
+.container3 .text-container {
   text-align: left;
 }
 
-.container3 > div:last-child {
-  text-align: center;
-}
-
-.container4 {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
-  width: 100%;
-}
-
-.container4 > div:first-child {
-  text-align: center;
-}
-
-.container4 > div:last-child {
-  text-align: left;
+.container3 img {
+  width: 30%;
 }
 
 @media (max-width: 768px) {
-  .container1-steps {
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .step {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 가로 중앙 정렬 */
-    justify-content: center; /* 수직 방향 정렬 */
-    padding: 20px;
-    text-align: center;
-    gap: 15px;
-    width: 100%; /* 전체 너비를 차지 */
-    max-width: 300px; /* 최대 너비 제한 */
-    margin: 0 auto 20px auto; /* 상단/하단 여백 및 가로 중앙 정렬 */
-  }
-
-  .step-image {
-    flex-shrink: 0;
-    width: 100%;
-  }
-  
-  .step-image img {
-    flex-shrink: 0;
+  .container1 {
     width: 100%;
   }
 
   .container2 {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
-    width: 80%;
+    width: 100%;
   }
 
-  .container2 .feature p {
-    margin: 15px 20px 20px 20px;
+  .container2 .features {
+    display: flex;
+    flex-direction: column;
   }
 
   .container3 {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
+    flex-direction: column-reverse;
   }
 
-  .container3 > div:last-child img {
-    width: 200px;
-  }
-
-  .container4 {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .container4 > div:last-child {
-    text-align: center;
-  }
-
-  button.button-style1 {
-    width: calc(100% - 40px);
-    font-size: 14px;
-    padding: 12px;
-    margin: 20px auto;
-    display: block;
+  .container3 img {
+    width: 80%;
+    margin-bottom: 0.6vh;
   }
 }

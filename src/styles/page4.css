@@ -63,8 +63,10 @@
 .container2 img {
   display: block;
   float: left;
-  margin-top: 10px;
-  width: 120px;
+  width: 200px;
+  height: 100%;
+  aspect-ratio: unset;
+  object-fit: contain;
 }
 
 .container3 {
@@ -144,30 +146,37 @@
   gap: 4vw;
 }
 
-.container5 .image-container {
-  width: 80%;
+.container5 {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* 이미지 박스 간의 간격을 일정하게 */
-  margin: 0 auto; /* 수평 가운데 정렬 */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.container5 img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: unset;
+  object-fit: contain;
+}
+
+.container5 .image-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .container5 .image-box4 {
-  width: 20vw; /* 4개씩 배치되도록 width를 설정 */
-  text-align: center; /* 이미지와 텍스트를 가운데 정렬 */
+  display: grid;
+  grid-template-rows: 3fr 1fr; 
 }
 
 .container5 .image-container2 {
-  width: 60%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; /* 이미지 박스 간의 간격을 일정하게 */
-  margin: 0 auto; /* 수평 가운데 정렬 */
-  gap: 1vw;
-}
-.container5 .image-box3 {
-  width: 16vw; /* 3개씩 배치되도록 width를 설정 */
-  text-align: center; /* 이미지와 텍스트를 가운데 정렬 */
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4vh;
 }
 
 .container5 .image-box3 .image {
@@ -221,6 +230,19 @@
     padding: 4vw;
   }
 
+  .container4 .img-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container4 .img-container img {
+    max-width: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+    object-fit: contain;
+    margin-bottom: 0.4vh;
+  }
+
   .container4 .gif-container {
     flex-direction: column; /* 요소들을 수직으로 배치 */
   }
@@ -235,28 +257,18 @@
   }
 
   .container5 .image-container {
-    width: 100%;
-    padding: 4vw;
-  }
-
-  .container5 .image-box4 {
-    width: 40vw; /* 2개씩 배치되도록 width를 설정 */
-  }
-
-  .container5 .image-box4 h3 {
-    font-size: 1.1rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .container5 .image-container2 {
-    width: 100%;
-    padding: 4vw;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .container5 .image-box3 {
-    width: 24vw; /* 4개씩 배치되도록 width를 설정 */
+  .container5 .image-box4 h3 {
+    font-size: 1rem;
   }
 
   .container5 .image-box3 h3 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }

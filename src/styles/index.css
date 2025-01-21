@@ -159,6 +159,7 @@
 
 /* 모바일 메뉴 */
 .hamburger-menu {
+  width: 38.34px;
   margin: 1vh;
   display: none;
   height: 5vh;
@@ -245,6 +246,7 @@
   background-color: var(--color-secondary);
   color: var(--color-white);
   position: absolute; /* 절대 위치 지정 */
+  padding: 3vw;
   bottom: 4%; /* 화면의 가장 아래에 배치 */
 }
 
