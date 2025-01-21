@@ -2,8 +2,22 @@
 @import './colors.css';
 
 @font-face {
+  font-family: 'NanumGothicExtraBold';
+  src: url('../fonts/NanumGothicExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'NanumGothicBold';
   src: url('../fonts/NanumGothicBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../fonts/NanumGothic.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -58,7 +72,7 @@ img {
 }
 
 [class$="bold"] {
-  font-weight: bold;
+  font-family: 'NanumGothicExtraBold', sans-serif;
 }
 
 .highlight1 {
