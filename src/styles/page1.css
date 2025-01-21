@@ -37,7 +37,6 @@
 .container4 .features .feature {
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 4fr;
   flex-direction: column;
   background-color: var(--color-white);
   border: 1px solid var(--color-light-gray);
@@ -45,12 +44,19 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
   padding: 0.2vh;
+  height: auto;
 }
 
 .container4 .features .feature .feature-content {
   display: flex;
   flex-direction: column;
   margin-bottom: 0.2vh;
+}
+
+.container4 .features .feature img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .container2 {
