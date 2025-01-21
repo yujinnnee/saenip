@@ -1,7 +1,8 @@
-const domain = 'http://127.0.0.1:5501';
-//const domain = 'https://yujinnnee.github.io/saenip/';
+// const domain = 'http://127.0.0.1:5502';
+const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
+  
 
   // 멤버 변수 선언
   const header = document.querySelector('.header');            // 헤더
@@ -42,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // iframe 로드 시
       iframe.onload = () => {
+        isIframeHeightUpdated = false;
         // iframe 높이 업데이트
         UpdateIframeHeight();
 
@@ -174,6 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 언어 선택 박스 변경 이벤트
   sbxLanguage.addEventListener("change", () => {
     language = sbxLanguage.value;
+
     // 언어 변경
     ChangeLanguage();
     // 페이지 로드
@@ -197,10 +200,25 @@ document.addEventListener("DOMContentLoaded", function () {
   overlay.addEventListener('click', MenuClose);
 
   // 스크롤 이벤트
-  window.addEventListener("scroll", () =>
-    /* classList.toggle 메서드의 두 번째 매개변수는 조건을 기반으로 클래스를 추가하거나 제거하는 기능을 제공합니다. 따라서 remove가 없어지더라도 동일하게 동작합니다. */
-    header.classList.toggle("scrolled", window.scrollY > 0)
-  );
+  let previousIframeHeight = 0;
+
+  window.addEventListener("scroll", () => {
+    // 헤더에 스크롤 상태에 따라 클래스 추가/제거
+    header.classList.toggle("scrolled", window.scrollY > 0);
+  
+    // 현재 iframe 높이를 가져오기
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    if (iframeDoc && iframeDoc.body) {
+      const currentIframeHeight = iframeDoc.body.scrollHeight;
+  
+      // 이전 길이와 현재 길이가 다를 때만 UpdateIframeHeight 호출
+      if (currentIframeHeight !== previousIframeHeight) {
+        UpdateIframeHeight();
+        previousIframeHeight = currentIframeHeight; // 이전 길이를 갱신
+      }
+    }
+  });
+  
 
   // 페이지 로드시 이벤트
   window.addEventListener('load', () => {

@@ -39,7 +39,7 @@
 .header nav a {
   color: var(--color-white);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 0.5vh;
   transition: background-color 0.3s;
   font-weight: bold;
@@ -62,7 +62,7 @@
   color: var(--color-secondary);
   border: none;
   border-radius: 0.8vh;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.4vh 0.8vw;
   cursor: pointer;
   font-weight: bold;
@@ -74,19 +74,16 @@
 
 .header .language-select {
   display: inline-block;
-  font-weight: bold;
   margin-right: 1vw;
 }
 
 .language-dropdown {
   background-color: transparent;
   color: var(--color-white);
-  border: 0.3vh solid var(--color-white);
+  border: 0.25vh solid var(--color-white);
   border-radius: 80px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding: 0.4vh 0.4vw;
-  text-align: left;
-  align-items: center;
   cursor: pointer;
 }
 
