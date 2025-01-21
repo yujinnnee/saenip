@@ -2,8 +2,22 @@
 @import './colors.css';
 
 @font-face {
+  font-family: 'NanumGothicExtraBold';
+  src: url('../fonts/NanumGothicExtraBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'NanumGothicBold';
   src: url('../fonts/NanumGothicBold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumGothic';
+  src: url('../fonts/NanumGothic.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -22,6 +36,14 @@ textarea,
 select,
 button {
   font-family: 'NanumGothicBold', sans-serif;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover; /* 이미지를 원본 비율로 유지하며 꽉 차게 */
+  object-position: center; /* 이미지 중심 위치 */
 }
 
 *, *::before, *::after {
@@ -50,7 +72,7 @@ button {
 }
 
 [class$="bold"] {
-  font-weight: bold;
+  font-family: 'NanumGothicExtraBold', sans-serif;
 }
 
 .highlight1 {
