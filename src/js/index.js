@@ -2,7 +2,7 @@ const domain = 'http://127.0.0.1:5502';
 //const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
-  
+
 
   // 멤버 변수 선언
   const header = document.querySelector('.header');            // 헤더
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 변경시점 저장 변수
   let changeWidth = 0;                                         // 화면 넓이 변경 변수
   let language = "ko";
-  let currentPage ="page1.html";
+  let currentPage = "page1.html";
 
   // url 검사
   const params = new URLSearchParams(window.location.search);
@@ -117,6 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
     // 언어 변경시에도 resize 이벤트 발생
     ChangeMenuStyle();
   }
+
+  // 카톡 연결 함수
+  function openKakao() {
+    window.open('http://pf.kakao.com/_biTSG/chat', '_blank');
+  }
+
   // 모바일 메뉴바로 변경 함수
   function MobileMenu() {
     header.classList.add('small-screen');
@@ -205,12 +211,12 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", () => {
     // 헤더에 스크롤 상태에 따라 클래스 추가/제거
     header.classList.toggle("scrolled", window.scrollY > 0);
-  
+
     // 현재 iframe 높이를 가져오기
     const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
     if (iframeDoc && iframeDoc.body) {
       const currentIframeHeight = iframeDoc.body.scrollHeight;
-  
+
       // 이전 길이와 현재 길이가 다를 때만 UpdateIframeHeight 호출
       if (currentIframeHeight !== previousIframeHeight) {
         UpdateIframeHeight();
@@ -218,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-  
+
 
   // 페이지 로드시 이벤트
   window.addEventListener('load', () => {
