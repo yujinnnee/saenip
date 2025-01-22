@@ -1,2 +1,234 @@
-<h1>이용 요금 안내</h1>
-<p>SSPL의 요금제를 확인하세요.</p>
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>国内费用说明</title>
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/page3.css">
+  <script src="../../js/page3.js"></script>
+</head>
+
+<body>
+  <section>
+    <div class="container1">
+      <h1 class="h1-bold">合理的价格</h1>
+      <div class="buttons">
+        <button class="button-style1" data-target="section1">入库费</button>
+        <button class="button-style1" data-target="section2">仓储费</button>
+        <button class="button-style1" data-target="section3">出库费</button>
+        <button class="button-style1" data-target="section4">其他作业费</button>
+      </div>
+      <p>24小时全年无休的 KakaoTalk 询价<br>电话 : 010-2565-4892</p>
+    </div>
+  </section>
+
+  <section style="background-color: var(--color-light-gray);" id="section1">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">入库费</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>分类</th>
+            <th>单位</th>
+            <th>单价(元)</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">卸货/入库作业费<br>(系统库存反映)</td>
+            <td>PLT</td>
+            <td>5,000</td>
+            <td>单一PLT内有SKU痕迹时，发生BOX入库费</td>
+          </tr>
+          <tr>
+            <td>BOX</td>
+            <td>500</td>
+            <td>单一BOX内有SKU痕迹时，发生PCS入库费</td>
+          </tr>
+          <tr>
+            <td>PCS</td>
+            <td>100</td>
+            <td>全检及单独入库时发生，检验难度不同</td>
+          </tr>
+          <tr>
+            <td>11吨/40英尺卸货</td>
+            <td>车辆</td>
+            <td>500,000</td>
+            <td rowspan="4">需要打托的人工工作费用<br>根据商品类型调整协商<br>(包含入库作业费/库存反映费)</td>
+          </tr>
+          <tr>
+            <td>5吨/20英尺卸货</td>
+            <td>车辆</td>
+            <td>250,000</td>
+          </tr>
+          <tr>
+            <td>2.5吨卸货</td>
+            <td>车辆</td>
+            <td>150,000</td>
+          </tr>
+          <tr>
+            <td>1吨卸货</td>
+            <td>车辆</td>
+            <td>50,000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 比较入库信息与实际数量<br>
+        - 出库可能日期：入库日 +2天<br>
+        - <span class="highlight1">未附带条形码商品</span>贴上条形码时，发生PCS入库费<br>
+        - 车辆人工卸货后，如需要进行打托作业，按商品类型调整协商后产生额外费用
+      </p>
+    </div>
+  </section>
+
+  <section id="section2">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">仓储费</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>分类</th>
+            <th>单位</th>
+            <th>单价(元)</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>托盘</td>
+            <td rowspan="2">天</td>
+            <td>600/PLT</td>
+            <td>仓储规格：110x110x160cm<br>1PLT内1SKU为标准<br>主要存放小品种大批量商品<br>先进先出（保质期/批次）管理时产生额外费用</td>
+          </tr>
+          <tr>
+            <td>货架单元</td>
+            <td>700/SET</td>
+            <td>仓储规格：120x60x180cm<br>4层1SET<br>主要存放大品种小批量商品<br>先进先出（保质期/批次）管理时产生额外费用</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 为确保安全存储与出库，需事先协商后进行存放位置的<span class="highlight1">移动库存管理</span><br>
+        - 根据商品管理类型提供适合的存储方式建议<br>
+        - 如货架单元内SKU混合存放并需要分隔，按每PCS的存储费用进行协商
+      </p>
+    </div>
+  </section>
+
+  <section style="background-color: var(--color-light-gray);" id="section3">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">出库费</h1>
+      <p style="text-align: center;">(包括标准附加材料费用的基准金额)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>分类</th>
+            <th>单位</th>
+            <th>单价(元)</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>袋子/极小</td>
+            <td>袋子/盒子</td>
+            <td rowspan="6">根据商品类别协商</td>
+            <td>规格：三边之和80cm / 2kg以下</td>
+          </tr>
+          <tr>
+            <td>小型1</td>
+            <td>盒子</td>
+            <td>规格：三边之和90cm / 4kg以下</td>
+          </tr>
+          <tr>
+            <td>小型2</td>
+            <td>盒子</td>
+            <td>规格：三边之和100cm / 6kg以下</td>
+          </tr>
+          <tr>
+            <td>中型</td>
+            <td>盒子</td>
+            <td>规格：三边之和120cm / 10kg以下</td>
+          </tr>
+          <tr>
+            <td>大型</td>
+            <td>盒子</td>
+            <td>规格：三边之和160cm / 20kg以下</td>
+          </tr>
+          <tr>
+            <td>异型</td>
+            <td>盒子</td>
+            <td>超出上述规格的商品</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 出库费包括<span class="highlight1">快递费 + 拣货/包装费 + 包装附加材料费</span>，根据选择的附加材料费用有所不同<br>
+        - 使用专用工厂附加材料时，将收取快递费 + 拣货/包装费用<br>
+        - 合并包装时，会产生额外的工作费用，且岛屿地区和偏远地区的配送将产生额外费用<br>
+        - 不可通过快递处理的商品：三边之和超过160cm，最长边超过120cm，裸品，文件袋，麻袋包装，捆绑货物<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        危险货物：丁烷气（家用/露营用），油漆，发动机油，农药
+      </p>
+    </div>
+  </section>
+
+  <section id="section4">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">其他作业费用</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>分类</th>
+            <th>单位</th>
+            <th>单价(元)</th>
+            <th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>合并包装</td>
+            <td>件</td>
+            <td>100</td>
+            <td>商品捆绑配送时的额外包装作业费用</td>
+          </tr>
+          <tr>
+            <td>套装化作业</td>
+            <td>套</td>
+            <td>协商</td>
+            <td>根据商品类型/作业难度/所需时间进行协商</td>
+          </tr>
+          <tr>
+            <td>退货检验费</td>
+            <td>件</td>
+            <td>400</td>
+            <td>退货快递费另算，退货状态检验信息共享</td>
+          </tr>
+          <tr>
+            <td>合格品化/再入库</td>
+            <td>件</td>
+            <td>协商</td>
+            <td>根据商品类型/作业难度/所需时间进行协商</td>
+          </tr>
+          <tr>
+            <td>其他移动及出库</td>
+            <td colspan="2">以入库为准</td>
+            <td>仓库移动/客户回收等系统库存扣减时</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - 其他流通加工作业、打印物、标签、文件作业等费用需事先协商并另行计费<br>
+        - 直送/ Coupang/ 其他 <span class="highlight1">非快递出库方式</span>将根据事先协商的费用产生<br>
+        - 除提供的计算机库存外，额外库存调查请求将产生费用<br>
+      </p>
+    </div>
+  </section>
+
+</body>
+
+</html>

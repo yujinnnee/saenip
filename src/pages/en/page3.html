@@ -1,2 +1,243 @@
-<h1>이용 요금 안내</h1>
-<p>SSPL의 요금제를 확인하세요.</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domestic Rate Guide</title>
+  <link rel="stylesheet" href="../../styles/common.css">
+  <link rel="stylesheet" href="../../styles/page3.css">
+  <script src="../../js/page3.js"></script>
+</head>
+
+<body>
+  <section>
+    <div class="container1">
+      <h1 class="h1-bold">Reasonable Prices</h1>
+      <div class="buttons">
+        <button class="button-style1" data-target="section1">Inbound Fee</button>
+        <button class="button-style1" data-target="section2">Storage Fee</button>
+        <button class="button-style1" data-target="section3">Outbound Fee</button>
+        <button class="button-style1" data-target="section4">Other Service Fees</button>
+      </div>
+      <p>24/7 KakaoTalk inquiries for quotes<br>Phone: 010-2565-4892</p>
+    </div>
+  </section>
+
+  <section style="background-color: var(--color-light-gray);" id="section1">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">Inbound Fee</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Unit</th>
+            <th>Unit Price (KRW)</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3">Unloading/Inbound Work Fee<br>(System Inventory Reflection)</td>
+            <td>PLT</td>
+            <td>5,000</td>
+            <td>Inbound fee for BOX if SKU trace is found within a single PLT</td>
+          </tr>
+          <tr>
+            <td>BOX</td>
+            <td>500</td>
+            <td>Inbound fee for PCS if SKU trace is found within a single BOX</td>
+          </tr>
+          <tr>
+            <td>PCS</td>
+            <td>100</td>
+            <td>Occurs when performing full inspection or individual inbound, varies based on inspection difficulty</td>
+          </tr>
+          <tr>
+            <td>11-ton/40ft Unloading</td>
+            <td>Vehicle</td>
+            <td>500,000</td>
+            <td rowspan="4">Standard cost for palletizing and manual labor if required<br>Adjustments based on product
+              type can be discussed<br>(Includes inbound work fee/inventory reflection fee)</td>
+          </tr>
+          <tr>
+            <td>5-ton/20ft Unloading</td>
+            <td>Vehicle</td>
+            <td>250,000</td>
+          </tr>
+          <tr>
+            <td>2.5-ton Unloading</td>
+            <td>Vehicle</td>
+            <td>150,000</td>
+          </tr>
+          <tr>
+            <td>1-ton Unloading</td>
+            <td>Vehicle</td>
+            <td>50,000</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - Comparison of actual quantity against inbound information<br>
+        - Outbound available date: Inbound date +2 days<br>
+        - <span class="highlight1">Barcode Unattached Products</span> incur PCS inbound fee if labeling is required<br>
+        - Additional cost incurred for palletizing work after manual unloading of vehicles based on product type after
+        adjustments
+      </p>
+    </div>
+  </section>
+  <section id="section2">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">Storage Fee</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Unit</th>
+            <th>Unit Price (KRW)</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Palette</td>
+            <td rowspan="2">Day</td>
+            <td>600/PLT</td>
+            <td>Storage specification: 110x110x160cm<br>1SKU per 1PLT<br>Storage mainly for low variety and high volume
+              products<br>Additional costs for first-in, first-out (FIFO) management (expiration date/LOT)</td>
+          </tr>
+          <tr>
+            <td>Shelf Cell</td>
+            <td>700/SET</td>
+            <td>Storage specification: 120x60x180cm<br>4 tiers per SET<br>Storage mainly for high variety and low volume
+              products<br>Additional costs for first-in, first-out (FIFO) management (expiration date/LOT)</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - For safe storage and outbound handling, <span class="highlight1">inventory transfer management</span> will be
+        conducted after prior consultation<br>
+        - Suitable storage methods will be suggested according to the product management type<br>
+        - If SKUs are mixed within a shelf cell or separate partitions are required, storage costs per PCS will be
+        discussed
+      </p>
+    </div>
+  </section>
+  <section style="background-color: var(--color-light-gray);" id="section3">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">Shipping Fee</h1>
+      <p style="text-align: center;">(Standard packaging material costs included)</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Unit</th>
+            <th>Unit Price (KRW)</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Envelope/Extra Small</td>
+            <td>Envelope/Box</td>
+            <td rowspan="6">Negotiable based on product type</td>
+            <td>Specification: Total of three dimensions 80cm / 2kg or less</td>
+          </tr>
+          <tr>
+            <td>Small 1</td>
+            <td>Box</td>
+            <td>Specification: Total of three dimensions 90cm / 4kg or less</td>
+          </tr>
+          <tr>
+            <td>Small 2</td>
+            <td>Box</td>
+            <td>Specification: Total of three dimensions 100cm / 6kg or less</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>Box</td>
+            <td>Specification: Total of three dimensions 120cm / 10kg or less</td>
+          </tr>
+          <tr>
+            <td>Large</td>
+            <td>Box</td>
+            <td>Specification: Total of three dimensions 160cm / 20kg or less</td>
+          </tr>
+          <tr>
+            <td>Irregular</td>
+            <td>Box</td>
+            <td>Items exceeding the specifications above</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - The shipping fee includes <span class="highlight1">shipping cost + picking/packing cost + packaging material
+          cost</span>, and the cost may vary based on selected packaging materials<br>
+        - When using dedicated factory packaging materials, only shipping + picking/packing fees will be charged<br>
+        - Additional costs for other tasks may occur if combined packaging is performed, and additional shipping costs
+        will be charged for deliveries to Jeju island or remote areas<br>
+        - Items that cannot be shipped: Items exceeding a total dimension of 160cm, longest side exceeding 120cm, bulk
+        items, document envelopes, burlap bags, strapped cargo<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Dangerous goods: Butane gas (for home/camping), oil-based paint, engine oil, pesticides
+      </p>
+    </div>
+  </section>
+
+  <section id="section4">
+    <div class="container2">
+      <h1 class="h1-bold highlight2">Other Service Fees</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Unit</th>
+            <th>Unit Price (KRW)</th>
+            <th>Remarks</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Combined Packaging</td>
+            <td>PCS</td>
+            <td>100</td>
+            <td>Packaging cost added for bundled delivery of products</td>
+          </tr>
+          <tr>
+            <td>Set Creation</td>
+            <td>SET</td>
+            <td>Negotiable</td>
+            <td>Negotiated based on product type/work difficulty/time required</td>
+          </tr>
+          <tr>
+            <td>Return Inspection Fee</td>
+            <td>Per Return</td>
+            <td>400</td>
+            <td>Return shipping cost is separate, inspection information will be shared</td>
+          </tr>
+          <tr>
+            <td>Quality Inspection/Re-stocking</td>
+            <td>PCS</td>
+            <td>Negotiable</td>
+            <td>Negotiated based on product type/work difficulty/time required</td>
+          </tr>
+          <tr>
+            <td>Other Moves and Shipments</td>
+            <td colspan="2">Based on receiving</td>
+            <td>When moving within the warehouse or returning to the consignor, and system stock is reduced</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        - Other distribution processing tasks, print materials, stickers, document tasks, etc. will incur additional
+        costs after prior consultation<br>
+        - Direct deliveries, Coupang, and other <span class="highlight1">non-courier shipping methods</span> will incur
+        costs after prior consultation<br>
+        - Additional costs will be incurred for requests related to stock investigations beyond the provided system
+        inventory
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>
