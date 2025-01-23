@@ -1,9 +1,7 @@
-const domain = 'http://127.0.0.1:5502';
-//const domain = 'https://yujinnnee.github.io/saenip/';
+// const domain = 'http://127.0.0.1:5502';
+const domain = 'https://yujinnnee.github.io/saenip/';
 
 document.addEventListener("DOMContentLoaded", function () {
-
-
   // 멤버 변수 선언
   const header = document.querySelector('.header');            // 헤더
   const footer = document.querySelector(".footer");            // 푸터
@@ -32,6 +30,12 @@ document.addEventListener("DOMContentLoaded", function () {
   sbxLanguage.value = language;
   ChangeLanguage();
   LoadPage();
+
+  document.querySelectorAll('[name="kakao"]').forEach(button => {
+    button.addEventListener('click', () => {
+      window.open('http://pf.kakao.com/_biTSG/chat', '_blank');
+    });
+  });
 
   // 함수 설정
 
@@ -118,11 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ChangeMenuStyle();
   }
 
-  // 카톡 연결 함수
-  function openKakao() {
-    window.open('http://pf.kakao.com/_biTSG/chat', '_blank');
-  }
-
   // 모바일 메뉴바로 변경 함수
   function MobileMenu() {
     header.classList.add('small-screen');
@@ -160,11 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // URL 경로에서 원하는 부분 추출
     const pathParts = parsedUrl.pathname.split('/');  // 경로를 '/' 기준으로 나눔
 
-    const language = pathParts[pathParts.length - 2];  // '언어'
-    const page = pathParts[pathParts.length - 1];      // '페이지'
+    const clanguage = pathParts[pathParts.length - 2];  // '언어'
+    const cpage = pathParts[pathParts.length - 1];      // '페이지'
 
     // URL 업데이트
-    history.replaceState({ page: page }, '', `?lang=${language}&page=${page.replace('.html', '')}`);
+    history.replaceState({ page: cpage }, '', `?lang=${clanguage}&page=${cpage.replace('.html', '')}`);
+
+    language = clanguage;
+    currentPage = cpage;
 
     // 모바일일 경우 메뉴 닫기
     MenuClose();

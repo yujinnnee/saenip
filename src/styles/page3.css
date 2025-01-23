@@ -1,28 +1,26 @@
 .container1 {
-  width: 100%;
+  width: 80%;
   text-align: center;
+  align-items: center;
 }
 
 .container1 .buttons {
-  width: 60%; /* 부모 컨테이너의 너비 */
-  margin: 2rem auto; /* 수평 중앙 정렬 */
-  display: flex;
-  flex-wrap: nowrap; /* 버튼을 한 줄에 유지 */
-  justify-content: center; /* 버튼을 가로로 중앙 정렬 */
-  align-items: center; /* 버튼을 세로로 중앙 정렬 */
-  gap: 1vw; /* 버튼 간 간격 */
+  width: 100%; /* 부모 컨테이너의 너비 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 가로로 4개 */
+  gap: 2vw; /* 버튼 간 간격 */
+  justify-content: center; /* 가로 정렬 */
+  align-items: center; /* 세로 정렬 */
+  padding-left: 20vw;
+  padding-right: 20vw;
 }
 
 .container1 .buttons button {
-  width: 150px; /* 버튼 너비 */
   margin: 1%; /* 버튼 자체 마진 제거 */
   font-size: 1rem;
   cursor: pointer;
   text-align: center; /* 텍스트 중앙 정렬 */
-  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
-  flex-shrink: 0; /* 버튼 크기를 줄이지 않음 */
 }
-
 
 .container2 {
   width: 80%;

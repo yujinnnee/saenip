@@ -40,6 +40,12 @@
   text-align: left;
 }
 
+.container2 img {
+  aspect-ratio: unset;
+  object-fit: contain;
+  width:30%
+}
+
 .marquee {
   position: relative;
   width: 80%;
@@ -110,5 +116,9 @@
     width: 100%;
     padding-right: 1vw;
     padding-left: 1vw;
+  }
+
+  .container2 img {
+    width:100%
   }
 }

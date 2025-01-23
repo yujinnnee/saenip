@@ -18,13 +18,13 @@
   <header class="header">
     <div class="logo" id="btnLogo" data-text-key="logo">SAENIP</div>
     <nav>
-      <a href="#" data-page="page1.html" data-text-key="home">홈</a>
-      <a href="#" data-page="page2.html" data-text-key="domesticServices">국내 서비스 소개</a>
-      <a href="#" data-page="page3.html" data-text-key="domesticPricing">국내 요금 안내</a>
-      <a href="#" data-page="page4.html" data-text-key="internationalServices">해외 서비스 소개</a>
-      <a href="#" data-page="page5.html" data-text-key="internationalPricing">해외 요금 안내</a>
-      <a href="#" data-page="page6.html" data-text-key="inquiry">견적문의 및 오시는 길</a>
-      <button class="header-btn" onclick="openKakao()" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
+      <a id="page1" href="#" data-page="page1.html" data-text-key="home">홈</a>
+      <a id="page2" href="#" data-page="page2.html" data-text-key="domesticServices">국내 서비스 소개</a>
+      <a id="page3" href="#" data-page="page3.html" data-text-key="domesticPricing">국내 요금 안내</a>
+      <a id="page4" href="#" data-page="page4.html" data-text-key="internationalServices">해외 서비스 소개</a>
+      <a id="page5" href="#" data-page="page5.html" data-text-key="internationalPricing">해외 요금 안내</a>
+      <a id="page6" href="#" data-page="page6.html" data-text-key="inquiry">견적문의 및 오시는 길</a>
+      <button class="header-btn" name="kakao" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
     </nav>
     <div class="header-right">
       <div class="language-select">
@@ -34,7 +34,7 @@
           <option value="zh">中文</option>
         </select>
       </div>
-      <button class="header-btn" onclick="openKakao()" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
+      <button class="header-btn" name="kakao" data-text-key="kakaoConsultation">카카오톡 상담문의</button>
     </div>
     <!-- 햄버거 메뉴 버튼 -->
     <img class="hamburger-menu" src="src/icons/hamburger.svg" id="hamburgerBtn" />
