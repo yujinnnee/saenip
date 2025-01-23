@@ -119,6 +119,10 @@
   width: 80%;
 }
 
+.container4 h1 {
+  margin-bottom: 0.4vh;
+}
+
 .container4 .gif-container p,
 .container4 .gif-container h3,
 .container4 .img-container p,
@@ -127,17 +131,18 @@
 }
 
 .container4 .img-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1vh;
+  margin-top: 0.4vh;
+  margin-bottom: 0.4vh;
+  gap: 4vw;
 }
 
 .container4 .img-container img {
-  max-width: 40vw;
-  height: auto;
+  aspect-ratio: unset;
   object-fit: contain;
-  margin-right: 4vw;
 }
 
 .container4 .gif-container {
@@ -218,7 +223,6 @@
 
   .container2 {
     width: 100%;
-    padding: 4vw;
   }
 
   .container3 .box-up {
@@ -227,7 +231,6 @@
 
   .container4 {
     width: 100%;
-    padding: 4vw;
   }
 
   .container4 .img-container {
@@ -249,7 +252,6 @@
 
   .container5 {
     width: 100%;
-    padding: 4vw;
   }
 
   .container5 h1 {

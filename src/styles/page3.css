@@ -24,8 +24,6 @@
 
 .container2 {
   width: 80%;
-  padding-right: 4rem;
-  padding-left: 4rem;
 }
 
 .container2 p {
@@ -40,7 +38,5 @@
   }
   .container2 {
     width: 100%;
-    padding-right: 1vw;
-    padding-left: 1vw;
   }
 }
