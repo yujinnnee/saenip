@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://saenip3pl.com/sitemap.xml
