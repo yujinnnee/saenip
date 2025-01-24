@@ -1,5 +1,5 @@
 //const domain = 'http://127.0.0.1:5502';
-const domain = 'saenip3pl.com';
+const domain = 'http://saenip3pl.com';
 
 document.addEventListener("DOMContentLoaded", function () {
   // 멤버 변수 선언
