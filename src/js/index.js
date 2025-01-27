@@ -1,6 +1,3 @@
-// const domain = 'http://127.0.0.1:5502';
-const domain = 'http://saenip3pl.com';
-
 document.addEventListener("DOMContentLoaded", function () {
   // 멤버 변수 선언
   const header = document.querySelector('.header');            // 헤더
@@ -43,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function LoadPage() {
     try {
       // iframe src 설정
-      iframe.src = `${domain}/src/pages/${language}/${currentPage}`;
+      iframe.src = `/src/pages/${language}/${currentPage}`;
 
       // iframe 로드 시
       iframe.onload = () => {
