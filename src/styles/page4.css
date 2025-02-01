@@ -91,13 +91,11 @@
   overflow: hidden; /* 모서리 둥근 영역 밖 내용 숨김 */
   text-align: center;
   width: 230px; /* 각 박스의 너비 */
-  display: flex;
-  flex-direction: column; /* 상하 배치 */
-  aspect-ratio: 1.2 / 1; /* 너비와 높이의 비율 (정사각형) */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .container3 .box-up, .container3 .box-down {
-  flex: 1; /* 동일한 높이로 설정 */
   display: flex;
   justify-content: center;
   align-items: center; /* 가운데 정렬 */
@@ -226,7 +224,7 @@
   }
 
   .container3 .box-up {
-    font-size: 0.8em;
+    font-size: 0.8rem;
   }
 
   .container4 {
