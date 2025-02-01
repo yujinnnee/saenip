@@ -171,7 +171,7 @@
 
 .container5 .image-box4 {
   display: grid;
-  grid-template-rows: 3fr 1fr; 
+  grid-template-rows: 3fr 1fr;
 }
 
 .container5 .image-container2 {
@@ -262,6 +262,11 @@
 
   .container5 .image-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .container5 .image-box4 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
   }
 
   .container5 .image-container2 {
