@@ -131,15 +131,15 @@ section.visible {
   }
 
   .h1-basic, .h1-bold {
-    font-size: calc(var(--font-size-h1) * 0.6); /* H1 폰트 크기 축소 */
+    font-size: calc(var(--font-size-h1) * 0.5); /* H1 폰트 크기 축소 */
   }
 
   .h2-basic, .h2-bold {
-    font-size: calc(var(--font-size-h2) * 0.6); /* H2 폰트 크기 축소 */
+    font-size: calc(var(--font-size-h2) * 0.5); /* H2 폰트 크기 축소 */
   }
 
   .h3-basic, .h3-bold {
-    font-size: calc(var(--font-size-h3) * 0.6); /* H3 폰트 크기 축소 */
+    font-size: calc(var(--font-size-h3) * 0.5); /* H3 폰트 크기 축소 */
   }
 
   .p-basic, .p-bold {

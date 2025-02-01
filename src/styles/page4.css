@@ -224,7 +224,11 @@
   }
 
   .container3 .box-up {
-    font-size: 0.8rem;
+    font-size: 0.55rem;
+  }
+
+  .container3 .box-down {
+    font-size: 1rem;
   }
 
   .container4 {
