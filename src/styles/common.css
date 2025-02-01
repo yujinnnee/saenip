@@ -139,11 +139,11 @@ section.visible {
   }
 
   .h3-basic, .h3-bold {
-    font-size: calc(var(--font-size-h3) * 0.5); /* H3 폰트 크기 축소 */
+    font-size: calc(var(--font-size-h3) * 0.6); /* H3 폰트 크기 축소 */
   }
 
   .p-basic, .p-bold {
-    font-size: calc(var(--font-size-p) * 0.6); /* 본문 폰트 크기 축소 */
+    font-size: calc(var(--font-size-p) * 0.65); /* 본문 폰트 크기 축소 */
     line-height: 1.5; /* 본문 줄 간격 조정 */
   }
 
