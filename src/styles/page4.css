@@ -262,11 +262,13 @@
 
   .container5 .image-container {
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    margin-bottom:15%;
   }
 
   .container5 .image-box4 {
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   .container5 .image-container2 {
