@@ -35,6 +35,11 @@
   height: auto;
 }
 
+.image2 {
+  width: 25vw;
+  height: auto;
+}
+
 .container1 .arrow img {
   width: 4vw;
   display: block;
@@ -281,5 +286,10 @@
 
   .container5 .image-box3 h3 {
     font-size: 1rem;
+  }
+
+  .image2 {
+    width: 100%;
+    height: auto;
   }
 }
