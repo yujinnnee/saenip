@@ -35,6 +35,11 @@
   height: auto;
 }
 
+.image2 {
+  width: 25vw;
+  height: auto;
+}
+
 .container1 .arrow img {
   width: 4vw;
   display: block;
@@ -171,7 +176,7 @@
 
 .container5 .image-box4 {
   display: grid;
-  grid-template-rows: 3fr 1fr; 
+  grid-template-rows: 3fr 1fr;
 }
 
 .container5 .image-container2 {
@@ -224,7 +229,11 @@
   }
 
   .container3 .box-up {
-    font-size: 0.8rem;
+    font-size: 0.55rem;
+  }
+
+  .container3 .box-down {
+    font-size: 1rem;
   }
 
   .container4 {
@@ -258,6 +267,13 @@
 
   .container5 .image-container {
     grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    margin-bottom:15%;
+  }
+
+  .container5 .image-box4 {
+    display: grid;
+    grid-template-rows: auto;
   }
 
   .container5 .image-container2 {
@@ -270,5 +286,10 @@
 
   .container5 .image-box3 h3 {
     font-size: 1rem;
+  }
+
+  .image2 {
+    width: 100%;
+    height: auto;
   }
 }

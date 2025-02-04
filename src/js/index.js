@@ -29,10 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
   LoadPage();
 
   document.querySelectorAll('[name="kakao"]').forEach(button => {
-    button.addEventListener('click', () => {
-      window.open('http://pf.kakao.com/_biTSG/chat', '_blank');
-    });
+    const handler = () => {
+      if(button.textContent.includes('문의')){
+        window.open('http://pf.kakao.com/_biTSG/chat', '_blank');
+      }
+    };
+  
+    button.addEventListener('click', handler);
   });
+  
 
   // 함수 설정
 
@@ -268,7 +273,7 @@ const languages = {
     internationalServices: "International Services",
     internationalPricing: "International Pricing",
     inquiry: "Inquiry and Directions",
-    kakaoConsultation: "KakaoTalk Consultation",
+    kakaoConsultation: "Wechat/WhatsApp :sjb5429",
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "Business Number: 121-81-99283",
@@ -284,7 +289,7 @@ const languages = {
     internationalServices: "国际服务介绍",
     internationalPricing: "国际费用指南",
     inquiry: "询价与方向",
-    kakaoConsultation: "KakaoTalk 咨询",
+    kakaoConsultation: "Wechat/WhatsApp :sjb5429",
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "公司注册号: 121-81-99283",
