@@ -261,6 +261,7 @@ const languages = {
     companyInfo1: "(주)새닢",
     companyInfo2: "대표자: 손재봉",
     companyInfo3: "사업자번호: 121-81-99283",
+    companyInfo6: "3PL / 풍년 창고",
     companyInfo4: "대표 전화: 010-2565-4892",
     companyInfo5: "대표 메일: saenipkorea@daum.net",
     inquiryBtn: "견적문의 및 오시는 길"
@@ -277,7 +278,8 @@ const languages = {
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "Business Number: 121-81-99283",
-    companyInfo4: "Main Phone: 010-2565-4892",
+    companyInfo6: "3PL / Pungnyeon",
+    companyInfo4: "Warehouse Main Phone: 010-2565-4892",
     companyInfo5: "Email: saenipkorea@daum.net",
     inquiryBtn: "Inquiry and Directions"
   },
@@ -293,6 +295,7 @@ const languages = {
     companyInfo1: "(주)SAENIP",
     companyInfo2: "CEO: Jaebong Son",
     companyInfo3: "公司注册号: 121-81-99283",
+    companyInfo6: "3PL / 丰年仓库",
     companyInfo4: "联系电话: 010-2565-4892",
     companyInfo5: "邮箱: saenipkorea@daum.net",
     inquiryBtn: "询价与方向"
